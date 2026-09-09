@@ -1,0 +1,268 @@
+{
+  "schema": "sop-research-evidence",
+  "node": "v22.16.0",
+  "platform": "linux/x64",
+  "scope": "restricted SOP execution profile; no external LLM or network",
+  "transitions": {
+    "cases": 4800,
+    "correct": 4800,
+    "bundles": 5,
+    "suppliedSources": 40,
+    "expectedMismatch": 0,
+    "oracleMismatch": 0,
+    "exhaustive": {
+      "cases": 7168,
+      "correct": 7168
+    },
+    "exhaustiveBundles": 1,
+    "seconds": 7.607144819999999,
+    "scope": "fixed supplied SOP programs; no training of transition rules is performed by this suite"
+  },
+  "graphAbstraction": {
+    "cases": 1000,
+    "correct": 1000,
+    "learned": [
+      {
+        "name": "generated.completion.family0",
+        "slots": 2,
+        "demonstrations": 3
+      },
+      {
+        "name": "generated.completion.family1",
+        "slots": 4,
+        "demonstrations": 3
+      },
+      {
+        "name": "generated.completion.family2",
+        "slots": 2,
+        "demonstrations": 3
+      },
+      {
+        "name": "generated.completion.family3",
+        "slots": 3,
+        "demonstrations": 3
+      }
+    ],
+    "wrongRoles": {
+      "cases": 400,
+      "correct": 400
+    },
+    "unboundCases": 50,
+    "unboundAbstentions": 50,
+    "episodicExactMatches": 0,
+    "supervision": "12 aligned executable SOP demonstrations; not induction of transitions from raw text"
+  },
+  "observationSynthesis": {
+    "runs": [
+      {
+        "seed": 17,
+        "task": 0,
+        "cases": 200,
+        "correct": 200,
+        "training": 12,
+        "validation": 8,
+        "disjointInputs": true,
+        "cost": 2,
+        "candidates": 22,
+        "validationRejected": 0,
+        "status": "found"
+      },
+      {
+        "seed": 17,
+        "task": 1,
+        "cases": 200,
+        "correct": 200,
+        "training": 12,
+        "validation": 8,
+        "disjointInputs": true,
+        "cost": 2,
+        "candidates": 25,
+        "validationRejected": 0,
+        "status": "found"
+      },
+      {
+        "seed": 17,
+        "task": 2,
+        "cases": 200,
+        "correct": 200,
+        "training": 12,
+        "validation": 8,
+        "disjointInputs": true,
+        "cost": 3,
+        "candidates": 458,
+        "validationRejected": 0,
+        "status": "found"
+      },
+      {
+        "seed": 29,
+        "task": 0,
+        "cases": 200,
+        "correct": 200,
+        "training": 12,
+        "validation": 8,
+        "disjointInputs": true,
+        "cost": 2,
+        "candidates": 22,
+        "validationRejected": 0,
+        "status": "found"
+      },
+      {
+        "seed": 29,
+        "task": 1,
+        "cases": 200,
+        "correct": 200,
+        "training": 12,
+        "validation": 8,
+        "disjointInputs": true,
+        "cost": 2,
+        "candidates": 25,
+        "validationRejected": 0,
+        "status": "found"
+      },
+      {
+        "seed": 29,
+        "task": 2,
+        "cases": 200,
+        "correct": 200,
+        "training": 12,
+        "validation": 8,
+        "disjointInputs": true,
+        "cost": 3,
+        "candidates": 458,
+        "validationRejected": 0,
+        "status": "found"
+      },
+      {
+        "seed": 41,
+        "task": 0,
+        "cases": 200,
+        "correct": 200,
+        "training": 12,
+        "validation": 8,
+        "disjointInputs": true,
+        "cost": 2,
+        "candidates": 22,
+        "validationRejected": 0,
+        "status": "found"
+      },
+      {
+        "seed": 41,
+        "task": 1,
+        "cases": 200,
+        "correct": 200,
+        "training": 12,
+        "validation": 8,
+        "disjointInputs": true,
+        "cost": 2,
+        "candidates": 25,
+        "validationRejected": 0,
+        "status": "found"
+      },
+      {
+        "seed": 41,
+        "task": 2,
+        "cases": 200,
+        "correct": 200,
+        "training": 12,
+        "validation": 8,
+        "disjointInputs": true,
+        "cost": 3,
+        "candidates": 458,
+        "validationRejected": 0,
+        "status": "found"
+      }
+    ],
+    "cases": 1800,
+    "correct": 1800,
+    "insufficientVocabularyOrDepth": "unknown",
+    "scope": "binary numeric operations; a sanity test of graph synthesis, not evidence of language acquisition"
+  },
+  "language": {
+    "cases": 1200,
+    "correct": 1200,
+    "distinctSentences": 1200,
+    "constructions": 12,
+    "unsupportedCases": 300,
+    "unsupportedRejected": 300,
+    "endToEnd": {
+      "cases": 300,
+      "correct": 300
+    },
+    "scope": "hand-authored whole-sentence token matching; no learned parser"
+  },
+  "composition": {
+    "cases": 14,
+    "correct": 14,
+    "chainLength": 40,
+    "derivedFacts": 820,
+    "rounds": 41,
+    "cycleTerminates": true,
+    "truncationStatus": "unknown",
+    "scope": "one hand-authored recursive relation family; no large retrieval workload"
+  },
+  "summarization": {
+    "cases": 500,
+    "correct": 500,
+    "unsupportedFactStatus": "unknown",
+    "scope": "complete delta realization over two relations; not document abstraction"
+  },
+  "ambiguity": {
+    "cases": 400,
+    "correct": 400,
+    "scope": "two supplied readings and a support-selection policy, not general disambiguation"
+  },
+  "versions": {
+    "acceptedPhases": 3,
+    "rejectedConflictingRevision": true,
+    "activeVersionPreserved": true,
+    "replayValue": 10,
+    "scope": "regression-gated, single-process metadata activation; no automatic drift adaptation"
+  },
+  "frozenKernel": {
+    "beforeHash": "d908995a93cef35dc3b65496a4317ee052ab92d779204ce16596c565cfcf22cf",
+    "afterHash": "d908995a93cef35dc3b65496a4317ee052ab92d779204ce16596c565cfcf22cf",
+    "unchanged": true,
+    "extension": {
+      "cases": 100,
+      "correct": 100
+    },
+    "opaqueVocabulary": {
+      "cases": 100,
+      "correct": 100
+    },
+    "scope": "extension uses a new SOP file; no runtime/native changes"
+  },
+  "mutations": {
+    "mutants": [
+      {
+        "label": "remove-absence",
+        "differences": 13,
+        "killed": true
+      },
+      {
+        "label": "remove-first-state-join",
+        "differences": 38,
+        "killed": true
+      },
+      {
+        "label": "reverse-summary-polarity",
+        "differences": 1,
+        "killed": true
+      }
+    ],
+    "killed": 3,
+    "total": 3
+  },
+  "epistemicBoundaries": {
+    "missingCoverage": "unknown",
+    "staleCoverage": "unknown",
+    "completeCoverage": "complete",
+    "unsupportedEvent": "unknown"
+  },
+  "inventory": {
+    "sopFiles": 97,
+    "nativeCommands": 39,
+    "hostSourceLines": 444
+  },
+  "totalSeconds": 12.164685908
+}

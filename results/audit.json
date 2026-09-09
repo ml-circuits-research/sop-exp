@@ -1,0 +1,373 @@
+{
+  "schema": "sop-review-observations",
+  "node": "v22.16.0",
+  "scope": "Concrete successes, observed limitations and refusal/validation checks. Do not sum these into an accuracy score.",
+  "supported": [
+    {
+      "id": "simple-sentence",
+      "input": {
+        "text": "Alice picked up book.",
+        "before": [
+          [
+            "at",
+            "Alice",
+            "lab"
+          ],
+          [
+            "at",
+            "book",
+            "lab"
+          ]
+        ]
+      },
+      "actual": {
+        "status": "complete",
+        "value": {
+          "text": "Alice now holds book.",
+          "after": [
+            [
+              "at",
+              "Alice",
+              "lab"
+            ],
+            [
+              "at",
+              "book",
+              "lab"
+            ],
+            [
+              "holds",
+              "Alice",
+              "book"
+            ]
+          ],
+          "event": [
+            "take",
+            "Alice",
+            "book"
+          ]
+        },
+        "steps": 364,
+        "trace": []
+      },
+      "claim": "One supported sentence can update the supplied state and verbalize its delta."
+    }
+  ],
+  "limitations": [
+    {
+      "id": "pronoun-is-a-literal",
+      "input": {
+        "text": "She picked up book.",
+        "before": [
+          [
+            "at",
+            "Alice",
+            "lab"
+          ],
+          [
+            "at",
+            "book",
+            "lab"
+          ]
+        ]
+      },
+      "desired": "Resolve She to Alice when the discourse establishes that reference, or explicitly request disambiguation.",
+      "actual": {
+        "status": "complete",
+        "value": {
+          "text": "",
+          "after": [
+            [
+              "at",
+              "Alice",
+              "lab"
+            ],
+            [
+              "at",
+              "book",
+              "lab"
+            ]
+          ],
+          "event": [
+            "take",
+            "She",
+            "book"
+          ]
+        },
+        "steps": 355,
+        "trace": []
+      },
+      "capabilityMet": false,
+      "reason": "No discourse or entity resolver is called. She is an ordinary identifier and the state has no fact at(She,...)."
+    },
+    {
+      "id": "punctuation-required",
+      "input": {
+        "text": "Alice picked up book",
+        "before": [
+          [
+            "at",
+            "Alice",
+            "lab"
+          ],
+          [
+            "at",
+            "book",
+            "lab"
+          ]
+        ]
+      },
+      "desired": "Accept the sentence without the final period.",
+      "actual": {
+        "status": "unknown",
+        "reason": "Expected one candidate; observed 0"
+      },
+      "capabilityMet": false,
+      "reason": "The hand-written whole-sentence pattern includes the final period as a token."
+    },
+    {
+      "id": "recognition-is-not-execution",
+      "input": {
+        "text": "Alice inspected book.",
+        "before": [
+          [
+            "at",
+            "Alice",
+            "lab"
+          ],
+          [
+            "at",
+            "book",
+            "lab"
+          ]
+        ]
+      },
+      "parsed": [
+        [
+          "inspect",
+          "Alice",
+          "book"
+        ]
+      ],
+      "desired": "Execute a defined inspection operation.",
+      "actual": {
+        "status": "unknown",
+        "reason": "No candidate is available in the selected library"
+      },
+      "capabilityMet": false,
+      "reason": "inspect has a parsing construction but no transition circuit in the selected library."
+    },
+    {
+      "id": "extension-not-in-default-parser",
+      "input": "Alice grabbed book.",
+      "direct": [
+        [
+          "take",
+          "Alice",
+          "book"
+        ]
+      ],
+      "defaultParser": [],
+      "desired": "Enable the construction in the default parser.",
+      "capabilityMet": false,
+      "reason": "The source exists and is callable, but language.parse has an explicit list that does not include it."
+    },
+    {
+      "id": "synthesis-pruning-can-miss-a-solution",
+      "training": [
+        {
+          "input": {
+            "a": 0,
+            "b": 0
+          },
+          "output": 0
+        }
+      ],
+      "validation": [
+        {
+          "input": {
+            "a": 2,
+            "b": 3
+          },
+          "output": 25
+        },
+        {
+          "input": {
+            "a": 1,
+            "b": 4
+          },
+          "output": 25
+        }
+      ],
+      "actual": {
+        "status": "unknown",
+        "reason": "no program in the explored profile",
+        "evaluated": 12,
+        "validationRejected": 14
+      },
+      "witnessSource": "@input input\n@a data.get source $input key \"a\"\n@b data.get source $input key \"b\"\n@s number.add left $a right $b\n@output number.multiply left $s right $s\n",
+      "witnessResults": [
+        25,
+        25
+      ],
+      "desired": "Find a program satisfying both supplied example sets.",
+      "capabilityMet": false,
+      "reason": "Intermediate programs are deduplicated using training outputs only. On the all-zero training set their outputs collide; the necessary sum intermediate is dropped. unknown is not a completeness result, even for a representable program."
+    },
+    {
+      "id": "coincident-demonstration-roles",
+      "demonstrations": [
+        "@input input\n@context data.get source $input key \"context\"\n@seed bindings.unit\n@first relation.join rows $seed facts $context name \"step0\" arg0 \"ask\" arg1 \"A\" arg2 \"A\"\n@second relation.join rows $first facts $context name \"step1\" arg0 \"answer\" arg1 \"A\" arg2 \"A\"\n@output rows.project rows $second name \"ack\" arg0 \"A\" arg1 \"A\"\n",
+        "@input input\n@context data.get source $input key \"context\"\n@seed bindings.unit\n@first relation.join rows $seed facts $context name \"step0\" arg0 \"ask\" arg1 \"B\" arg2 \"B\"\n@second relation.join rows $first facts $context name \"step1\" arg0 \"answer\" arg1 \"B\" arg2 \"B\"\n@output rows.project rows $second name \"ack\" arg0 \"B\" arg1 \"B\"\n",
+        "@input input\n@context data.get source $input key \"context\"\n@seed bindings.unit\n@first relation.join rows $seed facts $context name \"step0\" arg0 \"ask\" arg1 \"C\" arg2 \"C\"\n@second relation.join rows $first facts $context name \"step1\" arg0 \"answer\" arg1 \"C\" arg2 \"C\"\n@output rows.project rows $second name \"ack\" arg0 \"C\" arg1 \"C\"\n"
+      ],
+      "input": {
+        "context": [
+          [
+            "step0",
+            "ask",
+            "Alice",
+            "Bob"
+          ],
+          [
+            "step1",
+            "answer",
+            "Bob",
+            "Alice"
+          ]
+        ]
+      },
+      "actual": {
+        "status": "complete",
+        "value": [],
+        "steps": 9,
+        "trace": []
+      },
+      "desired": [
+        [
+          "ack",
+          "Alice",
+          "Bob"
+        ]
+      ],
+      "learnedSlots": 1,
+      "capabilityMet": false,
+      "reason": "The demonstrations never distinguish asker and respondent. Abstraction groups their identical value columns into one slot. Distinguishing roles requires discriminating demonstrations."
+    },
+    {
+      "id": "no-state-invariant-validator",
+      "input": {
+        "before": [
+          [
+            "at",
+            "Alice",
+            "lab"
+          ],
+          [
+            "at",
+            "Alice",
+            "office"
+          ],
+          [
+            "at",
+            "book",
+            "lab"
+          ]
+        ],
+        "event": [
+          "take",
+          "Alice",
+          "book"
+        ]
+      },
+      "actual": {
+        "status": "complete",
+        "value": {
+          "after": [
+            [
+              "at",
+              "Alice",
+              "lab"
+            ],
+            [
+              "at",
+              "Alice",
+              "office"
+            ],
+            [
+              "at",
+              "book",
+              "lab"
+            ],
+            [
+              "holds",
+              "Alice",
+              "book"
+            ]
+          ],
+          "effects": [
+            {
+              "sign": "+",
+              "fact": [
+                "holds",
+                "Alice",
+                "book"
+              ],
+              "producer": "/tasks.advance#214/program.apply#216/knowledge.transitions.model101.take.r003#217/effect.add#220",
+              "support": [
+                "[\"take\",\"Alice\",\"book\"]",
+                "[\"at\",\"Alice\",\"lab\"]",
+                "[\"at\",\"book\",\"lab\"]",
+                "{\"absent\":\"holds\",\"snapshot\":\"[\\\"[\\\\\\\"at\\\\\\\",\\\\\\\"Alice\\\\\\\",\\\\\\\"lab\\\\\\\"]\\\",\\\"[\\\\\\\"at\\\\\\\",\\\\\\\"Alice\\\\\\\",\\\\\\\"office\\\\\\\"]\\\",\\\"[\\\\\\\"at\\\\\\\",\\\\\\\"book\\\\\\\",\\\\\\\"lab\\\\\\\"]\\\"]\"}"
+              ]
+            }
+          ]
+        },
+        "steps": 64,
+        "trace": []
+      },
+      "desired": "Reject two simultaneous locations for a person under the benchmark world contract.",
+      "capabilityMet": false,
+      "reason": "The core operates on tuples and does not enforce the test-world invariants on arbitrary caller input."
+    },
+    {
+      "id": "dependencies-not-pinned",
+      "sourceHash": "7d8c0dd5953ef5517fdf3f734768c17efe97a71bd634dcf6809e2afb148b13bd",
+      "hashStillMatches": true,
+      "first": 1,
+      "replay": 2,
+      "desired": "Replay the same result after unrelated dependency changes.",
+      "capabilityMet": false,
+      "reason": "Only the parent source is addressed by hash. Transitive dependencies and the runtime are not pinned by this activation store."
+    }
+  ],
+  "guards": [
+    {
+      "id": "empty-validation-rejected",
+      "emptyRejected": true,
+      "reason": "At least one validation example is required",
+      "active": null
+    },
+    {
+      "id": "negation-not-applied-positively",
+      "actual": {
+        "status": "unknown",
+        "reason": "Expected one candidate; observed 0"
+      }
+    },
+    {
+      "id": "unbound-output",
+      "actual": {
+        "status": "unknown",
+        "reason": "Output contains an unbound slot"
+      }
+    },
+    {
+      "id": "budget-exhaustion",
+      "actual": {
+        "status": "unknown",
+        "reason": "Work budget exhausted"
+      }
+    }
+  ]
+}

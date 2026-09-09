@@ -1,0 +1,12 @@
+@input input
+@candidates data.get source $input key "candidates"
+@facts data.get source $input key "facts"
+@p logic.variable
+@q logic.variable
+@t logic.variable
+@seed bindings.unit
+@reading relation.join rows $seed facts $candidates name "interpretation"
+arg0 "instrument" arg1 $p arg2 $q arg3 $t
+@support relation.join rows $reading facts $facts name "uses" arg0 $p arg1 $t
+@output rows.project rows $support name "interpretation"
+arg0 "instrument" arg1 $p arg2 $q arg3 $t

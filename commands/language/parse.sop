@@ -1,0 +1,18 @@
+@input input
+@text data.get source $input key "text"
+@rules data.sequence
+arg0 "language.grammar.take1"
+arg1 "language.grammar.take2"
+arg2 "language.grammar.travel1"
+arg3 "language.grammar.travel2"
+arg4 "language.grammar.drop1"
+arg5 "language.grammar.drop2"
+arg6 "language.grammar.give1"
+arg7 "language.grammar.give2"
+arg8 "language.grammar.inspect1"
+arg9 "language.grammar.store1"
+arg10 "language.grammar.take3"
+arg11 "language.grammar.travel3"
+@matches collection.map items $rules command "language.apply" text $text
+@events data.flatten items $matches
+@output data.unique items $events

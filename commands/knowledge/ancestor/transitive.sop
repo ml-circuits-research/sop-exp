@@ -1,0 +1,9 @@
+@input input
+@facts data.get source $input key "facts"
+@x logic.variable
+@y logic.variable
+@z logic.variable
+@seed bindings.unit
+@parents relation.join rows $seed facts $facts name "parent" arg0 $x arg1 $y
+@tail relation.join rows $parents facts $facts name "ancestor" arg0 $y arg1 $z
+@output rows.project rows $tail name "ancestor" arg0 $x arg1 $z

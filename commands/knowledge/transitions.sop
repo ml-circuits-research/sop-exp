@@ -1,0 +1,10 @@
+@input input
+@output data.sequence
+arg0 "knowledge.transitions.model101.drop.r000"
+arg1 "knowledge.transitions.model101.give.r001"
+arg2 "knowledge.transitions.model101.give.r002"
+arg3 "knowledge.transitions.model101.take.r003"
+arg4 "knowledge.transitions.model101.travel.r004"
+arg5 "knowledge.transitions.model101.travel.r005"
+arg6 "knowledge.transitions.model101.travel.r006"
+arg7 "knowledge.transitions.model101.travel.r007"

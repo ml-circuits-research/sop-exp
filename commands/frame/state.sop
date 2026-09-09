@@ -1,0 +1,3 @@
+@input input
+@source data.get source $input key "source"
+@output data.get source $source key "before"

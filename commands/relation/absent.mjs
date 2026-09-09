@@ -1,0 +1,4 @@
+/** Generic native primitive. No domain event or language-construction dispatch. */
+import {key,seq,resolve,unify,ground,unique,delta,applyPatch,BudgetExceeded,UnknownCoverage} from "../../src/values.mjs";
+export const parameters="rows facts name coverage? arg*";
+export default function(a,c){const out=[],pattern=seq(a),facts=a.facts.filter(f=>f[0]===a.name),coverage=a.coverage??c.frame.coverage;for(const row of a.rows){let witness=false;for(const f of facts){c.tick();if(unify(pattern,f,row.bindings)){witness=true;break;}}if(witness)continue;if(!coverage||coverage.snapshot!==key(a.facts.map(key).sort())||!coverage.predicates.includes(a.name))throw new UnknownCoverage(`Absence of ${a.name} not justified for this snapshot`);out.push({bindings:new Map(row.bindings),support:[...row.support,key({absent:a.name,snapshot:coverage.snapshot})]});}return out;}

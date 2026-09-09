@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "positive": 1,
+  "unsupported": 1,
+  "knowledgeFiles": 97,
+  "copiedDirectories": [
+    "src",
+    "commands"
+  ],
+  "excluded": [
+    "experiments",
+    "data",
+    "tests",
+    "node_modules"
+  ],
+  "scope": "runtime independence, not a general security isolation claim"
+}

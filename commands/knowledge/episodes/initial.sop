@@ -1,0 +1,8 @@
+# Manually authored observation pack, not an inferred physical law.
+@input input
+@source text
+Alice is at the lab. The book is at the lab.
+@person data.fact name "at" arg0 "Alice" arg1 "lab"
+@object data.fact name "at" arg0 "book" arg1 "lab"
+@facts data.sequence arg0 $person arg1 $object
+@output data.record facts $facts source $source status "authored-observation"

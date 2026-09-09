@@ -1,0 +1,3 @@
+@input input
+@arguments data.with source $input sign "-"
+@output program.call command "effect.emit" arguments $arguments

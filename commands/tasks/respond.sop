@@ -1,0 +1,10 @@
+@input input
+@text data.get source $input key "text"
+@before data.get source $input key "before"
+@coverage data.get source $input key "coverage"
+@events language.parse text $text
+@event data.one items $events
+@transition tasks.advance event $event before $before coverage $coverage
+@after data.get source $transition key "after"
+@summary tasks.summarize before $before after $after
+@output data.record text $summary after $after event $event

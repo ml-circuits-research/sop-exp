@@ -1,0 +1,25 @@
+@input input
+
+@slot0 logic.variable
+
+@slot1 logic.variable
+
+@slot2 logic.variable
+
+@slot3 logic.variable
+
+@slot4 logic.variable
+
+@wire0 data.get
+source $input key "context"
+
+@wire1 bindings.unit
+
+@wire2 relation.join
+"rows" $wire1 "facts" $wire0 "name" "step0" "arg0" "pickup" "arg1" $slot0 "arg2" $slot1
+
+@wire3 relation.join
+"rows" $wire2 "facts" $wire0 "name" "step1" "arg0" "give" "arg1" $slot0 "arg2" $slot2 "arg3" $slot1
+
+@output rows.project
+"rows" $wire3 "name" "travel" "arg0" $slot2 "arg1" $slot3 "arg2" $slot4

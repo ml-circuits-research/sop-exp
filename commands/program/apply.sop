@@ -1,0 +1,4 @@
+@input input
+@name data.get source $input key "item"
+@arguments data.get source $input key "arguments"
+@output program.call command $name arguments $arguments

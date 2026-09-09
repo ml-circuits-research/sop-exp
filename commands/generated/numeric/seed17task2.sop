@@ -1,0 +1,6 @@
+@input input
+@input0 data.get source $input key "a"
+@input1 data.get source $input key "b"
+@node0 number.add left $input0 right $input1
+@node1 number.multiply left $node0 right $node0
+@output data.identity value $node1

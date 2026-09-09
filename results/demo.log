@@ -1,0 +1,130 @@
+
+Alice picked up book.
+{
+  "text": "Alice now holds book.",
+  "after": [
+    [
+      "at",
+      "Alice",
+      "lab"
+    ],
+    [
+      "at",
+      "book",
+      "lab"
+    ],
+    [
+      "holds",
+      "Alice",
+      "book"
+    ]
+  ],
+  "event": [
+    "take",
+    "Alice",
+    "book"
+  ]
+}
+
+Alice travelled to office.
+{
+  "text": "Alice is no longer at lab. book is no longer at lab. book is now at office. Alice is now at office.",
+  "after": [
+    [
+      "holds",
+      "Alice",
+      "book"
+    ],
+    [
+      "at",
+      "book",
+      "office"
+    ],
+    [
+      "at",
+      "Alice",
+      "office"
+    ]
+  ],
+  "event": [
+    "travel",
+    "Alice",
+    "office"
+  ]
+}
+
+Alice put down book.
+{
+  "text": "Alice no longer holds book.",
+  "after": [
+    [
+      "at",
+      "book",
+      "office"
+    ],
+    [
+      "at",
+      "Alice",
+      "office"
+    ]
+  ],
+  "event": [
+    "drop",
+    "Alice",
+    "book"
+  ]
+}
+
+Continuare pe evenimente structurate
+{
+  "status": "complete",
+  "value": [
+    [
+      "store",
+      "Ana",
+      "manual"
+    ]
+  ],
+  "steps": 12,
+  "trace": []
+}
+
+Program numeric deja sintetizat: 2*a+b pentru a=4, b=3
+{
+  "value": 11,
+  "steps": 7,
+  "trace": []
+}
+
+Negare nesuportată
+{
+  "status": "unknown",
+  "reason": "Expected one candidate; observed 0"
+}
+
+LIMITĂ: She rămâne identificator, nu este rezolvat ca Alice
+{
+  "status": "complete",
+  "value": {
+    "text": "",
+    "after": [
+      [
+        "at",
+        "Alice",
+        "lab"
+      ],
+      [
+        "at",
+        "book",
+        "lab"
+      ]
+    ],
+    "event": [
+      "take",
+      "She",
+      "book"
+    ]
+  },
+  "steps": 355,
+  "trace": []
+}

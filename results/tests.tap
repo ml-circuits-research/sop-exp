@@ -1,0 +1,418 @@
+TAP version 13
+# Subtest: documented working sentence produces its stated text
+ok 1 - documented working sentence produces its stated text
+  ---
+  duration_ms: 0.944832
+  type: 'test'
+  ...
+# Subtest: LIMIT: pronoun is currently an identifier, not resolved discourse
+ok 2 - LIMIT: pronoun is currently an identifier, not resolved discourse
+  ---
+  duration_ms: 0.169776
+  type: 'test'
+  ...
+# Subtest: LIMIT: periodless input is outside the default sentence patterns
+ok 3 - LIMIT: periodless input is outside the default sentence patterns
+  ---
+  duration_ms: 0.141344
+  type: 'test'
+  ...
+# Subtest: LIMIT: inspection is parsed but lacks an executable transition
+ok 4 - LIMIT: inspection is parsed but lacks an executable transition
+  ---
+  duration_ms: 0.104795
+  type: 'test'
+  ...
+# Subtest: LIMIT: adding a file does not add its name to the default grammar list
+ok 5 - LIMIT: adding a file does not add its name to the default grammar list
+  ---
+  duration_ms: 0.104634
+  type: 'test'
+  ...
+# Subtest: LIMIT: training-only pruning can miss a program that satisfies selection examples
+ok 6 - LIMIT: training-only pruning can miss a program that satisfies selection examples
+  ---
+  duration_ms: 0.685096
+  type: 'test'
+  ...
+# Subtest: LIMIT: coincident demonstration roles are merged into one slot
+ok 7 - LIMIT: coincident demonstration roles are merged into one slot
+  ---
+  duration_ms: 0.118663
+  type: 'test'
+  ...
+# Subtest: LIMIT: inconsistent location facts are not rejected by a schema validator
+ok 8 - LIMIT: inconsistent location facts are not rejected by a schema validator
+  ---
+  duration_ms: 0.212991
+  type: 'test'
+  ...
+# Subtest: LIMIT: replay of source alone does not pin a called dependency
+ok 9 - LIMIT: replay of source alone does not pin a called dependency
+  ---
+  duration_ms: 0.775674
+  type: 'test'
+  ...
+# Subtest: promotion must not accept an empty validation set
+ok 10 - promotion must not accept an empty validation set
+  ---
+  duration_ms: 2.04767
+  type: 'test'
+  ...
+# Subtest: empty validation cannot replace an already active source
+ok 11 - empty validation cannot replace an already active source
+  ---
+  duration_ms: 41.905927
+  type: 'test'
+  ...
+# Subtest: program validation requires at least one observation
+ok 12 - program validation requires at least one observation
+  ---
+  duration_ms: 14.628563
+  type: 'test'
+  ...
+# Subtest: known limitations are not presented as positive capability results
+ok 13 - known limitations are not presented as positive capability results
+  ---
+  duration_ms: 0.205316
+  type: 'test'
+  ...
+# Subtest: multiline declarations have no dot terminator
+ok 14 - multiline declarations have no dot terminator
+  ---
+  duration_ms: 5.761394
+  type: 'test'
+  ...
+# Subtest: forward references are topologically scheduled
+ok 15 - forward references are topologically scheduled
+  ---
+  duration_ms: 0.610925
+  type: 'test'
+  ...
+# Subtest: duplicate SSA producers are rejected
+ok 16 - duplicate SSA producers are rejected
+  ---
+  duration_ms: 0.542249
+  type: 'test'
+  ...
+# Subtest: unknown value wire is rejected
+ok 17 - unknown value wire is rejected
+  ---
+  duration_ms: 0.24257
+  type: 'test'
+  ...
+# Subtest: unknown handle wire is rejected
+ok 18 - unknown handle wire is rejected
+  ---
+  duration_ms: 0.248947
+  type: 'test'
+  ...
+# Subtest: cyclic references are rejected
+ok 19 - cyclic references are rejected
+  ---
+  duration_ms: 0.290089
+  type: 'test'
+  ...
+# Subtest: module output required
+ok 20 - module output required
+  ---
+  duration_ms: 0.366203
+  type: 'test'
+  ...
+# Subtest: input means call arguments
+ok 21 - input means call arguments
+  ---
+  duration_ms: 0.164683
+  type: 'test'
+  ...
+# Subtest: unclosed literal rejected
+ok 22 - unclosed literal rejected
+  ---
+  duration_ms: 0.584372
+  type: 'test'
+  ...
+# Subtest: literal period is data, not a delimiter
+ok 23 - literal period is data, not a delimiter
+  ---
+  duration_ms: 0.620411
+  type: 'test'
+  ...
+# Subtest: trailing delimiter rejected by argument contract
+ok 24 - trailing delimiter rejected by argument contract
+  ---
+  duration_ms: 0.379033
+  type: 'test'
+  ...
+# Subtest: duplicate argument rejected
+ok 25 - duplicate argument rejected
+  ---
+  duration_ms: 0.228443
+  type: 'test'
+  ...
+# Subtest: missing native argument is rejected
+ok 26 - missing native argument is rejected
+  ---
+  duration_ms: 0.180211
+  type: 'test'
+  ...
+# Subtest: unknown native argument is rejected
+ok 27 - unknown native argument is rejected
+  ---
+  duration_ms: 0.171649
+  type: 'test'
+  ...
+# Subtest: raw text supports $ interpolation and multiline bodies
+ok 28 - raw text supports $ interpolation and multiline bodies
+  ---
+  duration_ms: 0.320975
+  type: 'test'
+  ...
+# Subtest: quoted text also interpolates ordinary $ values
+ok 29 - quoted text also interpolates ordinary $ values
+  ---
+  duration_ms: 0.300511
+  type: 'test'
+  ...
+# Subtest: literal dollar escape
+ok 30 - literal dollar escape
+  ---
+  duration_ms: 0.277632
+  type: 'test'
+  ...
+# Subtest: inserting text does not reparse instructions
+ok 31 - inserting text does not reparse instructions
+  ---
+  duration_ms: 0.420676
+  type: 'test'
+  ...
+# Subtest: opaque values cannot silently interpolate as strings
+ok 32 - opaque values cannot silently interpolate as strings
+  ---
+  duration_ms: 0.176607
+  type: 'test'
+  ...
+# Subtest: ~ reference exposes producer and epoch, not just payload
+ok 33 - ~ reference exposes producer and epoch, not just payload
+  ---
+  duration_ms: 0.336516
+  type: 'test'
+  ...
+# Subtest: nested .sop command is called like a native command
+ok 34 - nested .sop command is called like a native command
+  ---
+  duration_ms: 0.585382
+  type: 'test'
+  ...
+# Subtest: path-derived native and SOP names resolve without type namespaces
+ok 35 - path-derived native and SOP names resolve without type namespaces
+  ---
+  duration_ms: 0.155223
+  type: 'test'
+  ...
+# Subtest: cannot overwrite a native command by source injection
+ok 36 - cannot overwrite a native command by source injection
+  ---
+  duration_ms: 0.193515
+  type: 'test'
+  ...
+# Subtest: invalid command paths are rejected
+ok 37 - invalid command paths are rejected
+  ---
+  duration_ms: 0.22191
+  type: 'test'
+  ...
+# Subtest: missing command has no heuristic fallback
+ok 38 - missing command has no heuristic fallback
+  ---
+  duration_ms: 0.253736
+  type: 'test'
+  ...
+# Subtest: parse/serialize preserves ordinary text behavior
+ok 39 - parse/serialize preserves ordinary text behavior
+  ---
+  duration_ms: 1.054894
+  type: 'test'
+  ...
+# Subtest: every materialized SOP file parses and its static calls resolve
+ok 40 - every materialized SOP file parses and its static calls resolve
+  ---
+  duration_ms: 40.463658
+  type: 'test'
+  ...
+# Subtest: language parsing is executed by SOP constructions
+ok 41 - language parsing is executed by SOP constructions
+  ---
+  duration_ms: 11.178223
+  type: 'test'
+  ...
+# Subtest: unsupported negation is not asserted positively
+ok 42 - unsupported negation is not asserted positively
+  ---
+  duration_ms: 5.33676
+  type: 'test'
+  ...
+# Subtest: incomplete coverage yields unknown, not false
+ok 43 - incomplete coverage yields unknown, not false
+  ---
+  duration_ms: 12.697389
+  type: 'test'
+  ...
+# Subtest: stale coverage token yields unknown
+ok 44 - stale coverage token yields unknown
+  ---
+  duration_ms: 2.733298
+  type: 'test'
+  ...
+# Subtest: closed coverage permits an absent-condition conclusion
+ok 45 - closed coverage permits an absent-condition conclusion
+  ---
+  duration_ms: 9.269468
+  type: 'test'
+  ...
+# Subtest: positive counterevidence blocks take without needing closure
+ok 46 - positive counterevidence blocks take without needing closure
+  ---
+  duration_ms: 0.807879
+  type: 'test'
+  ...
+# Subtest: state execution does not mutate input snapshot
+ok 47 - state execution does not mutate input snapshot
+  ---
+  duration_ms: 1.558058
+  type: 'test'
+  ...
+# Subtest: explicit work budget has an unknown outcome
+ok 48 - explicit work budget has an unknown outcome
+  ---
+  duration_ms: 1.016677
+  type: 'test'
+  ...
+# Subtest: fixed point on a cycle terminates without erasing reflexive consequences
+ok 49 - fixed point on a cycle terminates without erasing reflexive consequences
+  ---
+  duration_ms: 1.203096
+  type: 'test'
+  ...
+# Subtest: delta summary does not silently drop unsupported relations
+ok 50 - delta summary does not silently drop unsupported relations
+  ---
+  duration_ms: 1.933026
+  type: 'test'
+  ...
+# Subtest: no support preserves both ambiguity branches
+ok 51 - no support preserves both ambiguity branches
+  ---
+  duration_ms: 1.048406
+  type: 'test'
+  ...
+# Subtest: conflicting supports preserve ambiguity rather than majority voting
+ok 52 - conflicting supports preserve ambiguity rather than majority voting
+  ---
+  duration_ms: 0.574775
+  type: 'test'
+  ...
+# Subtest: abstraction outputs an executable SOP source with shared slots
+ok 53 - abstraction outputs an executable SOP source with shared slots
+  ---
+  duration_ms: 2.631172
+  type: 'test'
+  ...
+# Subtest: abstraction is insensitive to local producer renaming
+ok 54 - abstraction is insensitive to local producer renaming
+  ---
+  duration_ms: 1.561968
+  type: 'test'
+  ...
+# Subtest: unmatched graph topology is not presented as learned alignment
+ok 55 - unmatched graph topology is not presented as learned alignment
+  ---
+  duration_ms: 0.277086
+  type: 'test'
+  ...
+# Subtest: unbound target slot explicitly abstains
+ok 56 - unbound target slot explicitly abstains
+  ---
+  duration_ms: 0.779052
+  type: 'test'
+  ...
+# Subtest: synthesis returns unknown outside search budget
+ok 57 - synthesis returns unknown outside search budget
+  ---
+  duration_ms: 0.688419
+  type: 'test'
+  ...
+# Subtest: only supplied generic operators are searched
+ok 58 - only supplied generic operators are searched
+  ---
+  duration_ms: 0.532659
+  type: 'test'
+  ...
+# Subtest: source promotion rejects conflicting predictions
+ok 59 - source promotion rejects conflicting predictions
+  ---
+  duration_ms: 3.199728
+  type: 'test'
+  ...
+# Subtest: native code does not contain the test-domain vocabulary
+ok 60 - native code does not contain the test-domain vocabulary
+  ---
+  duration_ms: 2.17946
+  type: 'test'
+  ...
+# Subtest: active modules never import experiment or oracle code
+ok 61 - active modules never import experiment or oracle code
+  ---
+  duration_ms: 2.197266
+  type: 'test'
+  ...
+# Subtest: loader rejects a native/SOP same-path collision
+ok 62 - loader rejects a native/SOP same-path collision
+  ---
+  duration_ms: 34.614722
+  type: 'test'
+  ...
+# Subtest: unsupported event is unknown, not an observed no-op
+ok 63 - unsupported event is unknown, not an observed no-op
+  ---
+  duration_ms: 0.647239
+  type: 'test'
+  ...
+# Subtest: raw text programs are not silently anti-unified as named arguments
+ok 64 - raw text programs are not silently anti-unified as named arguments
+  ---
+  duration_ms: 0.309259
+  type: 'test'
+  ...
+# Subtest: freshness of a reusable source index is explicitly checkable
+ok 65 - freshness of a reusable source index is explicitly checkable
+  ---
+  duration_ms: 0.578231
+  type: 'test'
+  ...
+# Subtest: known but blocked take remains a complete no-op
+ok 66 - known but blocked take remains a complete no-op
+  ---
+  duration_ms: 0.771162
+  type: 'test'
+  ...
+# Subtest: documented executable examples match their described results
+ok 67 - documented executable examples match their described results
+  ---
+  duration_ms: 225.950207
+  type: 'test'
+  ...
+# Subtest: a knowledge observation is produced by an ordinary SOP circuit
+ok 68 - a knowledge observation is produced by an ordinary SOP circuit
+  ---
+  duration_ms: 0.634441
+  type: 'test'
+  ...
+1..68
+# tests 68
+# suites 0
+# pass 68
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 527.426519

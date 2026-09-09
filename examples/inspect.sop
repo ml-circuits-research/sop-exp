@@ -1,0 +1,3 @@
+@input input
+@answer data.identity value 7
+@output program.inspect reference ~answer

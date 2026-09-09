@@ -1,0 +1,12 @@
+@input input
+@event data.get source $input key "event"
+@action data.get source $event key 0
+@terms data.sequence arg0 $action
+@library knowledge.transitions
+@selected program.retrieve names $library terms $terms
+@available collection.requireNonEmpty items $selected
+@patches collection.map items $available command "program.apply" arguments $input
+@effects data.flatten items $patches
+@before data.get source $input key "before"
+@after state.apply before $before effects $effects
+@output data.record after $after effects $effects

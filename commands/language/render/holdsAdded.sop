@@ -1,0 +1,7 @@
+@input input
+@facts data.get source $input key "facts"
+@x logic.variable
+@y logic.variable
+@seed bindings.unit
+@matches relation.join rows $seed facts $facts name "holds" arg0 $x arg1 $y
+@output rows.map rows $matches command "language.say.holdsAdded" person $x object $y

@@ -1,0 +1,18 @@
+@input input
+@event frame.event source $input
+@state frame.state source $input
+@person logic.variable
+@object logic.variable
+@place logic.variable
+@holder logic.variable
+@seed bindings.unit
+@q0 relation.join rows $seed facts $event
+  name "take" arg0 $person arg1 $object
+@q1 relation.join rows $q0 facts $state
+  name "at" arg0 $person arg1 $place
+@q2 relation.join rows $q1 facts $state
+  name "at" arg0 $object arg1 $place
+@q3 relation.absent rows $q2 facts $state
+  name "holds" arg0 $holder arg1 $object
+@output effect.add rows $q3
+  name "holds" arg0 $person arg1 $object

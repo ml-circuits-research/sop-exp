@@ -1,0 +1,12 @@
+@input input
+@text data.get source $input key "text"
+@facts data.get source $input key "facts"
+@a language.ambiguity.instrument text $text
+@b language.ambiguity.modifier text $text
+@both data.sequence arg0 $a arg1 $b
+@candidates data.flatten items $both
+@sa language.support.instrument candidates $candidates facts $facts
+@sb language.support.modifier candidates $candidates facts $facts
+@supports data.sequence arg0 $sa arg1 $sb
+@supported data.flatten items $supports
+@output data.resolve candidates $candidates supported $supported

@@ -1,0 +1,6 @@
+{
+  "supported": 1,
+  "observedLimitations": 8,
+  "guards": 4,
+  "results": "results/audit.json"
+}

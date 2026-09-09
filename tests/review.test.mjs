@@ -1,0 +1,25 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import os from 'node:os';
+import path from 'node:path';
+import {runAudit} from '../audit.mjs';
+import {createRuntime} from '../src/runtime.mjs';
+import {Versions} from '../src/versions.mjs';
+import {validateProgram} from '../src/learning.mjs';
+
+const report=await runAudit();
+const limitation=id=>report.limitations.find(r=>r.id===id);
+test('documented working sentence produces its stated text',()=>assert.equal(report.supported[0].actual.value.text,'Alice now holds book.'));
+test('LIMIT: pronoun is currently an identifier, not resolved discourse',()=>{const r=limitation('pronoun-is-a-literal');assert.equal(r.actual.status,'complete');assert.equal(r.actual.value.event[1],'She');assert.equal(r.actual.value.text,'');assert.equal(r.capabilityMet,false);});
+test('LIMIT: periodless input is outside the default sentence patterns',()=>assert.equal(limitation('punctuation-required').actual.status,'unknown'));
+test('LIMIT: inspection is parsed but lacks an executable transition',()=>{const r=limitation('recognition-is-not-execution');assert.equal(r.parsed[0][0],'inspect');assert.equal(r.actual.status,'unknown');});
+test('LIMIT: adding a file does not add its name to the default grammar list',()=>{const r=limitation('extension-not-in-default-parser');assert.equal(r.direct.length,1);assert.equal(r.defaultParser.length,0);});
+test('LIMIT: training-only pruning can miss a program that satisfies selection examples',()=>{const r=limitation('synthesis-pruning-can-miss-a-solution');assert.equal(r.actual.status,'unknown');assert.deepEqual(r.witnessResults,[25,25]);});
+test('LIMIT: coincident demonstration roles are merged into one slot',()=>{const r=limitation('coincident-demonstration-roles');assert.equal(r.learnedSlots,1);assert.deepEqual(r.actual.value,[]);});
+test('LIMIT: inconsistent location facts are not rejected by a schema validator',()=>{const r=limitation('no-state-invariant-validator');assert.equal(r.actual.status,'complete');assert(r.actual.value.after.some(f=>f[0]==='holds'));});
+test('LIMIT: replay of source alone does not pin a called dependency',()=>{const r=limitation('dependencies-not-pinned');assert(r.hashStillMatches);assert.equal(r.first,1);assert.equal(r.replay,2);});
+test('promotion must not accept an empty validation set',()=>{const r=report.guards.find(x=>x.id==='empty-validation-rejected');assert(r.emptyRejected);assert.equal(r.active,null);});
+test('empty validation cannot replace an already active source',async()=>{const vm=await createRuntime(),folder=fs.mkdtempSync(path.join(os.tmpdir(),'sop-gate-'));try{const v=new Versions(folder),source='@input input\n@output data.identity value 1\n';const r=v.propose(vm,'checked.source',source,[{input:{},output:1}]);assert.throws(()=>v.propose(vm,'checked.source',source.replace('value 1','value 2'),[]),/At least one/);assert.equal(v.active['checked.source'],r.hash);assert.equal(vm.run('checked.source').value,1);}finally{fs.rmSync(folder,{recursive:true,force:true});}});
+test('program validation requires at least one observation',async()=>{const vm=await createRuntime();assert.throws(()=>validateProgram(vm,'@input input\n@output data.identity value 1\n',[]),/At least one/);});
+test('known limitations are not presented as positive capability results',()=>{assert.equal(report.limitations.length,8);assert(report.limitations.every(r=>r.capabilityMet===false));});

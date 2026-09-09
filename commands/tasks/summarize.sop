@@ -1,0 +1,16 @@
+@input input
+@before data.get source $input key "before"
+@after data.get source $input key "after"
+@delta state.difference before $before after $after
+@added data.get source $delta key "added"
+@removed data.get source $delta key "removed"
+@a language.render.atAdded facts $added
+@b language.render.atRemoved facts $removed
+@c language.render.holdsAdded facts $added
+@d language.render.holdsRemoved facts $removed
+@parts data.sequence arg0 $b arg1 $d arg2 $a arg3 $c
+@sentences data.flatten items $parts
+@partsDelta data.sequence arg0 $added arg1 $removed
+@changes data.flatten items $partsDelta
+@covered collection.requireSameSize items $sentences reference $changes
+@output text.join items $covered separator " "

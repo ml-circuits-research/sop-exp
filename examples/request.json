@@ -1,0 +1,22 @@
+{
+  "text": "Alice picked up book.",
+  "before": [
+    [
+      "at",
+      "Alice",
+      "lab"
+    ],
+    [
+      "at",
+      "book",
+      "lab"
+    ]
+  ],
+  "coverage": {
+    "predicates": [
+      "at",
+      "holds"
+    ],
+    "snapshot": "[\"[\\\"at\\\",\\\"Alice\\\",\\\"lab\\\"]\",\"[\\\"at\\\",\\\"book\\\",\\\"lab\\\"]\"]"
+  }
+}

@@ -1,0 +1,15 @@
+# Supplied transition program. The experiment tests execution, not transition induction.
+@input input
+@event frame.event source $input
+@state frame.state source $input
+@p0 logic.variable
+@p1 logic.variable
+@x0 logic.variable
+@x1 logic.variable
+@seed bindings.unit
+@q0 relation.join rows $seed facts $event name "take" arg0 $p0 arg1 $p1
+@q1 relation.join rows $q0 facts $state name "at" arg0 $p0 arg1 $x1
+@q2 relation.join rows $q1 facts $state name "at" arg0 $p1 arg1 $x1
+@q3 relation.absent rows $q2 facts $state name "holds" arg0 $x0 arg1 $p1
+@effect effect.add rows $q3 name "holds" arg0 $p0 arg1 $p1
+@output value.identity value $effect

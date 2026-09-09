@@ -1,0 +1,5 @@
+@input input
+@person data.get source $input key "person"
+@place data.get source $input key "place"
+@output text
+$person is now at $place.

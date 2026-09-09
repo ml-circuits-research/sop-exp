@@ -1,0 +1,4 @@
+@input input
+@source data.get source $input key "source"
+@event data.get source $source key "event"
+@output data.sequence arg0 $event

@@ -1,0 +1,4 @@
+@input input
+@facts data.get source $input key "facts"
+@rules data.sequence arg0 "knowledge.ancestor.direct" arg1 "knowledge.ancestor.transitive"
+@output state.close facts $facts commands $rules maxRounds 64

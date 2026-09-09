@@ -1,0 +1,10 @@
+@input input
+@a data.get
+  source $input
+  key "a"
+@b data.get
+  source $input
+  key "b"
+@output number.add
+  left $a
+  right $b

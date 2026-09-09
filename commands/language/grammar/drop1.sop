@@ -1,0 +1,10 @@
+@input input
+@text data.get source $input key "text"
+@tokens text.tokenize text $text
+@sentence data.prepend value "sentence" items $tokens
+@facts data.sequence arg0 $sentence
+@o logic.variable
+@p logic.variable
+@seed bindings.unit
+@matches relation.join rows $seed facts $facts name "sentence" arg0 $p arg1 "dropped" arg2 $o arg3 "."
+@output rows.project rows $matches name "drop" arg0 $p arg1 $o

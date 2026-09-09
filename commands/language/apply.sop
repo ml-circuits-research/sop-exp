@@ -1,0 +1,5 @@
+@input input
+@name data.get source $input key "item"
+@text data.get source $input key "text"
+@args data.record text $text
+@output program.call command $name arguments $args

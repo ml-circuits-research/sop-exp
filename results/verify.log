@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "checks": [
+    "distribution source/data/docs manifest",
+    "supplied transition programs: stored observations and independent evaluator",
+    "finite-world exhaustiveness is limited to one bundle and 7168 unique cases",
+    "aligned SOP abstraction: positive, role-perturbed and unbound cases remain separate",
+    "numeric synthesis: 9 runs, selection data are disjoint from final test within each run",
+    "controlled patterns and three-action pipeline, not general language comprehension",
+    "delta verbalization, not a document-summary benchmark",
+    "two-reading policy and one recursive-relation family",
+    "source activation is a regression gate, not automatic concept-drift learning",
+    "native implementation stays unchanged during the lexical and predicate-renaming tests",
+    "three concrete wrong-program mutations are detected",
+    "coverage, unbound values and unsupported events are not boolean false",
+    "observed failures remain explicit, not included as successful capability tests",
+    "every active source parses and its direct static calls resolve",
+    "68 regression checks are distinguished from prediction accuracy",
+    "two deployment smoke cases execute with only src and commands"
+  ],
+  "mode": "saved evidence cross-checks plus current immutable files; not a substitute for reproduce.mjs"
+}

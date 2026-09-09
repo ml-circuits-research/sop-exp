@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "node": "v22.16.0",
+  "platform": "linux",
+  "architecture": "x64",
+  "stages": [
+    "Regression checks (including documented limitations)",
+    "Experimental measurements",
+    "Concrete boundary cases",
+    "Deployment with only runtime and commands",
+    "Evidence and integrity checks"
+  ],
+  "note": "The eight documented capability limitations are still present; a successful reproduction does not make them solved."
+}

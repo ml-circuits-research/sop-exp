@@ -1,0 +1,13 @@
+@input input
+@training data.get source $input key "training"
+@validation data.get source $input key "validation"
+@operators data.sequence
+arg0 "number.add"
+arg1 "number.multiply"
+arg2 "number.subtract"
+@output program.synthesize
+training $training
+validation $validation
+operations $operators
+maxNodes 3
+maxCandidates 20000

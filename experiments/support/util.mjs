@@ -1,0 +1,6 @@
+import fs from 'node:fs';
+import {key}from'../../src/values.mjs';
+export const coverage=(facts,predicates=['at','holds'])=>({snapshot:key(facts.map(key).sort()),predicates});
+export const readLines=p=>fs.readFileSync(p,'utf8').trim().split('\n').map(JSON.parse);
+export const rng=seed=>()=>{seed|=0;seed=seed+0x6D2B79F5|0;let t=Math.imul(seed^seed>>>15,1|seed);t=t+Math.imul(t^t>>>7,61|t)^t;return ((t^t>>>14)>>>0)/4294967296;};
+export const json=(p,v)=>fs.writeFileSync(p,JSON.stringify(v,null,2)+'\n');

@@ -1,0 +1,5 @@
+@input input
+@person data.get source $input key "person"
+@object data.get source $input key "object"
+@output text
+$person now holds $object.

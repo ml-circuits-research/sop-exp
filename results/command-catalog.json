@@ -1,0 +1,1974 @@
+[
+  {
+    "name": "bindings.unit",
+    "implementation": "mjs",
+    "path": "commands/bindings/unit.mjs",
+    "hash": "b34659172cc127b182638fc83804a81ae93e941f562019e94a98be5c68b19d82",
+    "parameters": "",
+    "calls": []
+  },
+  {
+    "name": "collection.map",
+    "implementation": "mjs",
+    "path": "commands/collection/map.mjs",
+    "hash": "992ec47ec9c658d2c2d6609b422f2998d0dbafb424a842af75ec0187d384b670",
+    "parameters": "items command *",
+    "calls": []
+  },
+  {
+    "name": "collection.requireNonEmpty",
+    "implementation": "mjs",
+    "path": "commands/collection/requireNonEmpty.mjs",
+    "hash": "2a2ab9f67078ec5822af3035a71ca1bdd56c245ea25c972b5535ce158d47d009",
+    "parameters": "items",
+    "calls": []
+  },
+  {
+    "name": "collection.requireSameSize",
+    "implementation": "mjs",
+    "path": "commands/collection/requireSameSize.mjs",
+    "hash": "fec80fee1c528209f94a81717d8fd449d90a9ed0b53b7e81e86f396fd048c927",
+    "parameters": "items reference",
+    "calls": []
+  },
+  {
+    "name": "data.choose",
+    "implementation": "mjs",
+    "path": "commands/data/choose.mjs",
+    "hash": "ff22cebd53faf639b839ecbb6ce406dfab5fde2bdabb6527e63fde22955ffa02",
+    "parameters": "condition yes no",
+    "calls": []
+  },
+  {
+    "name": "data.fact",
+    "implementation": "mjs",
+    "path": "commands/data/fact.mjs",
+    "hash": "986f00ef292bf9eb39f5013d8b8ec7fa5a86e21913f481444d828b5090c9b084",
+    "parameters": "name arg*",
+    "calls": []
+  },
+  {
+    "name": "data.flatten",
+    "implementation": "mjs",
+    "path": "commands/data/flatten.mjs",
+    "hash": "b7f1729a0b6ecff4695f01f9ece0aa425bf760036bf2d10cad20a86e9b7ccb53",
+    "parameters": "items",
+    "calls": []
+  },
+  {
+    "name": "data.get",
+    "implementation": "mjs",
+    "path": "commands/data/get.mjs",
+    "hash": "79456481bd0dae934e26c51d8864500acb1069a171a85c6ad4e39cbdd5c3955a",
+    "parameters": "source key",
+    "calls": []
+  },
+  {
+    "name": "data.identity",
+    "implementation": "mjs",
+    "path": "commands/data/identity.mjs",
+    "hash": "db7cd3f7a717dbde5faa344b9d84fa2b89bc8431865896693516259c8071d67b",
+    "parameters": "value",
+    "calls": []
+  },
+  {
+    "name": "data.one",
+    "implementation": "mjs",
+    "path": "commands/data/one.mjs",
+    "hash": "44031be9eee6aad11d640b7775dd8bc05118c0a07958331bbf07b2632574bbbd",
+    "parameters": "items",
+    "calls": []
+  },
+  {
+    "name": "data.prepend",
+    "implementation": "mjs",
+    "path": "commands/data/prepend.mjs",
+    "hash": "95c12ba72ea9a361acd1ca0939ef0d1cebbb9aada1b7f7db6b8c375757059aab",
+    "parameters": "value items",
+    "calls": []
+  },
+  {
+    "name": "data.record",
+    "implementation": "mjs",
+    "path": "commands/data/record.mjs",
+    "hash": "318a2be0f9c4797af6e39fbafbbcf7dcd87743e85ed29bb71958dc7335ee7605",
+    "parameters": "*",
+    "calls": []
+  },
+  {
+    "name": "data.resolve",
+    "implementation": "mjs",
+    "path": "commands/data/resolve.mjs",
+    "hash": "aebf288ab2918411bddc2e21d71b648dc3aad49b58105e19c1b4156f8f213cf4",
+    "parameters": "candidates supported",
+    "calls": []
+  },
+  {
+    "name": "data.sequence",
+    "implementation": "mjs",
+    "path": "commands/data/sequence.mjs",
+    "hash": "4e552cff6955bf002a223f21c4636325a26c9b1a3fe4803393c47c18d4dbae53",
+    "parameters": "arg*",
+    "calls": []
+  },
+  {
+    "name": "data.unique",
+    "implementation": "mjs",
+    "path": "commands/data/unique.mjs",
+    "hash": "8ef283331de0b11a555492eb4185e93951d8a77b53e9c73f6d544c0dffbfe96a",
+    "parameters": "items",
+    "calls": []
+  },
+  {
+    "name": "data.with",
+    "implementation": "mjs",
+    "path": "commands/data/with.mjs",
+    "hash": "f35c50f89aecfba6d8cce36e4f54e138648e258059832e13146a63902167ba86",
+    "parameters": "source *",
+    "calls": []
+  },
+  {
+    "name": "effect.add",
+    "implementation": "sop",
+    "path": "commands/effect/add.sop",
+    "hash": "17516162c5d56312e688f96de014c176664079d48ee100f126681728c891bd86",
+    "parameters": null,
+    "calls": [
+      "input",
+      "data.with",
+      "program.call"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "effect.emit",
+    "implementation": "mjs",
+    "path": "commands/effect/emit.mjs",
+    "hash": "9305664e3ed5a6a09f4a4157ccefb0617de56cc749fa0beebd6173d80b5e57c5",
+    "parameters": "rows name sign arg*",
+    "calls": []
+  },
+  {
+    "name": "effect.remove",
+    "implementation": "sop",
+    "path": "commands/effect/remove.sop",
+    "hash": "d32f1de6c739abb7d9c28951a4012cca7ccc0685c07b7101a88d694a3e21a297",
+    "parameters": null,
+    "calls": [
+      "input",
+      "data.with",
+      "program.call"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "frame.event",
+    "implementation": "sop",
+    "path": "commands/frame/event.sop",
+    "hash": "5e55163d388af5bf2bded3b17c8af2bfe163656b01a938d3233179b95dc6b152",
+    "parameters": null,
+    "calls": [
+      "input",
+      "data.get",
+      "data.sequence"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "frame.state",
+    "implementation": "sop",
+    "path": "commands/frame/state.sop",
+    "hash": "f37b28a38e8113e80c0b2f327fd7fbde203a8c9a708890219e874edbb4a283d0",
+    "parameters": null,
+    "calls": [
+      "input",
+      "data.get"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "generated.completion.family0",
+    "implementation": "sop",
+    "path": "commands/generated/completion/family0.sop",
+    "hash": "9fc2ccb8c6af5c6e5a04106c5855cac60e0b7407827d110c098ef4d0a73cba7b",
+    "parameters": null,
+    "calls": [
+      "input",
+      "logic.variable",
+      "data.get",
+      "bindings.unit",
+      "relation.join",
+      "rows.project"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "generated.completion.family1",
+    "implementation": "sop",
+    "path": "commands/generated/completion/family1.sop",
+    "hash": "fef07f3f6914c7ea537215770c0a43178038ea4bdb94b915539486688a674eae",
+    "parameters": null,
+    "calls": [
+      "input",
+      "logic.variable",
+      "data.get",
+      "bindings.unit",
+      "relation.join",
+      "rows.project"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "generated.completion.family2",
+    "implementation": "sop",
+    "path": "commands/generated/completion/family2.sop",
+    "hash": "09cc583328e1b7a7b3b81d16b80490504e8bd79e34220fca26899d8b3d196a7c",
+    "parameters": null,
+    "calls": [
+      "input",
+      "logic.variable",
+      "data.get",
+      "bindings.unit",
+      "relation.join",
+      "rows.project"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "generated.completion.family3",
+    "implementation": "sop",
+    "path": "commands/generated/completion/family3.sop",
+    "hash": "9a8278007b3c7c4aad553605d6e1925c391a4e8869aa2fe1fe26d965172a0dec",
+    "parameters": null,
+    "calls": [
+      "input",
+      "logic.variable",
+      "data.get",
+      "bindings.unit",
+      "relation.join",
+      "rows.project"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "generated.completion.unbound",
+    "implementation": "sop",
+    "path": "commands/generated/completion/unbound.sop",
+    "hash": "93214a04f8fc47b05b605c6b297b5efd6b049f532aed4924728c8d399f24c7f5",
+    "parameters": null,
+    "calls": [
+      "input",
+      "logic.variable",
+      "data.get",
+      "bindings.unit",
+      "relation.join",
+      "rows.project"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "generated.numeric.seed17task0",
+    "implementation": "sop",
+    "path": "commands/generated/numeric/seed17task0.sop",
+    "hash": "9d09ec5fc8a62774bdf9b33d12c07085bab47de88823ed41ed46a1d222ceb3dd",
+    "parameters": null,
+    "calls": [
+      "input",
+      "data.get",
+      "number.add",
+      "data.identity"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "generated.numeric.seed17task1",
+    "implementation": "sop",
+    "path": "commands/generated/numeric/seed17task1.sop",
+    "hash": "69661e08160e41051f85b91191d3f97b1a0fd008711696a513c65080c6a88390",
+    "parameters": null,
+    "calls": [
+      "input",
+      "data.get",
+      "number.multiply",
+      "number.add",
+      "data.identity"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "generated.numeric.seed17task2",
+    "implementation": "sop",
+    "path": "commands/generated/numeric/seed17task2.sop",
+    "hash": "19025f9cb1237bfc7201dc8a90dc8d4ad3fb99dfaefe017c9d13f13f002a8bf1",
+    "parameters": null,
+    "calls": [
+      "input",
+      "data.get",
+      "number.add",
+      "number.multiply",
+      "data.identity"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "generated.numeric.seed29task0",
+    "implementation": "sop",
+    "path": "commands/generated/numeric/seed29task0.sop",
+    "hash": "9d09ec5fc8a62774bdf9b33d12c07085bab47de88823ed41ed46a1d222ceb3dd",
+    "parameters": null,
+    "calls": [
+      "input",
+      "data.get",
+      "number.add",
+      "data.identity"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "generated.numeric.seed29task1",
+    "implementation": "sop",
+    "path": "commands/generated/numeric/seed29task1.sop",
+    "hash": "69661e08160e41051f85b91191d3f97b1a0fd008711696a513c65080c6a88390",
+    "parameters": null,
+    "calls": [
+      "input",
+      "data.get",
+      "number.multiply",
+      "number.add",
+      "data.identity"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "generated.numeric.seed29task2",
+    "implementation": "sop",
+    "path": "commands/generated/numeric/seed29task2.sop",
+    "hash": "19025f9cb1237bfc7201dc8a90dc8d4ad3fb99dfaefe017c9d13f13f002a8bf1",
+    "parameters": null,
+    "calls": [
+      "input",
+      "data.get",
+      "number.add",
+      "number.multiply",
+      "data.identity"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "generated.numeric.seed41task0",
+    "implementation": "sop",
+    "path": "commands/generated/numeric/seed41task0.sop",
+    "hash": "9d09ec5fc8a62774bdf9b33d12c07085bab47de88823ed41ed46a1d222ceb3dd",
+    "parameters": null,
+    "calls": [
+      "input",
+      "data.get",
+      "number.add",
+      "data.identity"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "generated.numeric.seed41task1",
+    "implementation": "sop",
+    "path": "commands/generated/numeric/seed41task1.sop",
+    "hash": "69661e08160e41051f85b91191d3f97b1a0fd008711696a513c65080c6a88390",
+    "parameters": null,
+    "calls": [
+      "input",
+      "data.get",
+      "number.multiply",
+      "number.add",
+      "data.identity"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "generated.numeric.seed41task2",
+    "implementation": "sop",
+    "path": "commands/generated/numeric/seed41task2.sop",
+    "hash": "19025f9cb1237bfc7201dc8a90dc8d4ad3fb99dfaefe017c9d13f13f002a8bf1",
+    "parameters": null,
+    "calls": [
+      "input",
+      "data.get",
+      "number.add",
+      "number.multiply",
+      "data.identity"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "input",
+    "implementation": "mjs",
+    "path": "commands/input.mjs",
+    "hash": "7cbc4ac6551f37ac047f5d87b8b89764c57b9d2b8a491fffab0e53bebd06f30c",
+    "parameters": "",
+    "calls": []
+  },
+  {
+    "name": "knowledge.ancestor.direct",
+    "implementation": "sop",
+    "path": "commands/knowledge/ancestor/direct.sop",
+    "hash": "4d62b927b1f62f654562df3828e54db24625061eef367df240b9e65602d013bc",
+    "parameters": null,
+    "calls": [
+      "input",
+      "data.get",
+      "logic.variable",
+      "bindings.unit",
+      "relation.join",
+      "rows.project"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "knowledge.ancestor.transitive",
+    "implementation": "sop",
+    "path": "commands/knowledge/ancestor/transitive.sop",
+    "hash": "32d7a6a4fa2eef5a8b3b6600f90d95521bf133080fc9972100e3424a0999d75f",
+    "parameters": null,
+    "calls": [
+      "input",
+      "data.get",
+      "logic.variable",
+      "bindings.unit",
+      "relation.join",
+      "rows.project"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "knowledge.episodes.initial",
+    "implementation": "sop",
+    "path": "commands/knowledge/episodes/initial.sop",
+    "hash": "d4f98157a9025809eeb047529e6f0236d225abbed8366b29bfe2cf6f17429ac2",
+    "parameters": null,
+    "calls": [
+      "input",
+      "text",
+      "data.fact",
+      "data.sequence",
+      "data.record"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "knowledge.transitions",
+    "implementation": "sop",
+    "path": "commands/knowledge/transitions.sop",
+    "hash": "cbe69365d95f64e2d0895b10cbe51209e6e8b21a507fa91453c9efb69128b0ec",
+    "parameters": null,
+    "calls": [
+      "input",
+      "data.sequence"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "knowledge.transitions.model101.drop.r000",
+    "implementation": "sop",
+    "path": "commands/knowledge/transitions/model101/drop/r000.sop",
+    "hash": "2f9505d76763f1fd1dfcdcbbe4e1adcb56b4c6252f8f240899c1d97edc70c487",
+    "parameters": null,
+    "calls": [
+      "input",
+      "frame.event",
+      "frame.state",
+      "logic.variable",
+      "bindings.unit",
+      "relation.join",
+      "effect.remove",
+      "value.identity"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "knowledge.transitions.model101.give.r001",
+    "implementation": "sop",
+    "path": "commands/knowledge/transitions/model101/give/r001.sop",
+    "hash": "fa520896fdbfeb7249effe1f76f31b881c15755e7d6c5f61c4d99fcfeb6b1947",
+    "parameters": null,
+    "calls": [
+      "input",
+      "frame.event",
+      "frame.state",
+      "logic.variable",
+      "bindings.unit",
+      "relation.join",
+      "relation.absent",
+      "effect.remove",
+      "value.identity"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "knowledge.transitions.model101.give.r002",
+    "implementation": "sop",
+    "path": "commands/knowledge/transitions/model101/give/r002.sop",
+    "hash": "ecab8120caa0d72acd63202d9e97155a6e49bba3b6d43d76f82523af17d2e6b5",
+    "parameters": null,
+    "calls": [
+      "input",
+      "frame.event",
+      "frame.state",
+      "logic.variable",
+      "bindings.unit",
+      "relation.join",
+      "effect.add",
+      "value.identity"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "knowledge.transitions.model101.take.r003",
+    "implementation": "sop",
+    "path": "commands/knowledge/transitions/model101/take/r003.sop",
+    "hash": "7abcda07c67914776aa48287fc2edfbca651c4e3446354747dcb97d998530b03",
+    "parameters": null,
+    "calls": [
+      "input",
+      "frame.event",
+      "frame.state",
+      "logic.variable",
+      "bindings.unit",
+      "relation.join",
+      "relation.absent",
+      "effect.add",
+      "value.identity"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "knowledge.transitions.model101.travel.r004",
+    "implementation": "sop",
+    "path": "commands/knowledge/transitions/model101/travel/r004.sop",
+    "hash": "dba31b6ae6619e823f653874c692d0439987aec3ab6266b826ea647838d38ecc",
+    "parameters": null,
+    "calls": [
+      "input",
+      "frame.event",
+      "frame.state",
+      "logic.variable",
+      "bindings.unit",
+      "relation.join",
+      "logic.notEqual",
+      "effect.remove",
+      "value.identity"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "knowledge.transitions.model101.travel.r005",
+    "implementation": "sop",
+    "path": "commands/knowledge/transitions/model101/travel/r005.sop",
+    "hash": "f184e76b65fe4e3865a1a5f4b330c600cd62d4b812ea15189f7fdafa0e06c799",
+    "parameters": null,
+    "calls": [
+      "input",
+      "frame.event",
+      "frame.state",
+      "logic.variable",
+      "bindings.unit",
+      "relation.join",
+      "logic.notEqual",
+      "effect.remove",
+      "value.identity"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "knowledge.transitions.model101.travel.r006",
+    "implementation": "sop",
+    "path": "commands/knowledge/transitions/model101/travel/r006.sop",
+    "hash": "ac5f2469ecfed5d9e089e31fcbf4e693ddf6d6a7a369b91aa38c20d49dcb581f",
+    "parameters": null,
+    "calls": [
+      "input",
+      "frame.event",
+      "frame.state",
+      "logic.variable",
+      "bindings.unit",
+      "relation.join",
+      "logic.notEqual",
+      "effect.add",
+      "value.identity"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "knowledge.transitions.model101.travel.r007",
+    "implementation": "sop",
+    "path": "commands/knowledge/transitions/model101/travel/r007.sop",
+    "hash": "eb8b9f4db300df56351dd6c643c1a8a83ce4ffa11fc8ea758afe861fafdda8ef",
+    "parameters": null,
+    "calls": [
+      "input",
+      "frame.event",
+      "frame.state",
+      "logic.variable",
+      "bindings.unit",
+      "relation.join",
+      "effect.add",
+      "value.identity"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "knowledge.transitions.model202.drop.r000",
+    "implementation": "sop",
+    "path": "commands/knowledge/transitions/model202/drop/r000.sop",
+    "hash": "2f9505d76763f1fd1dfcdcbbe4e1adcb56b4c6252f8f240899c1d97edc70c487",
+    "parameters": null,
+    "calls": [
+      "input",
+      "frame.event",
+      "frame.state",
+      "logic.variable",
+      "bindings.unit",
+      "relation.join",
+      "effect.remove",
+      "value.identity"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "knowledge.transitions.model202.give.r001",
+    "implementation": "sop",
+    "path": "commands/knowledge/transitions/model202/give/r001.sop",
+    "hash": "9972e6ea88449822e90d85d3887924e45b6612c62012855c825b47c8d1d695a2",
+    "parameters": null,
+    "calls": [
+      "input",
+      "frame.event",
+      "frame.state",
+      "logic.variable",
+      "bindings.unit",
+      "relation.join",
+      "relation.absent",
+      "effect.remove",
+      "value.identity"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "knowledge.transitions.model202.give.r002",
+    "implementation": "sop",
+    "path": "commands/knowledge/transitions/model202/give/r002.sop",
+    "hash": "ecab8120caa0d72acd63202d9e97155a6e49bba3b6d43d76f82523af17d2e6b5",
+    "parameters": null,
+    "calls": [
+      "input",
+      "frame.event",
+      "frame.state",
+      "logic.variable",
+      "bindings.unit",
+      "relation.join",
+      "effect.add",
+      "value.identity"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "knowledge.transitions.model202.take.r003",
+    "implementation": "sop",
+    "path": "commands/knowledge/transitions/model202/take/r003.sop",
+    "hash": "7abcda07c67914776aa48287fc2edfbca651c4e3446354747dcb97d998530b03",
+    "parameters": null,
+    "calls": [
+      "input",
+      "frame.event",
+      "frame.state",
+      "logic.variable",
+      "bindings.unit",
+      "relation.join",
+      "relation.absent",
+      "effect.add",
+      "value.identity"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "knowledge.transitions.model202.travel.r004",
+    "implementation": "sop",
+    "path": "commands/knowledge/transitions/model202/travel/r004.sop",
+    "hash": "dba31b6ae6619e823f653874c692d0439987aec3ab6266b826ea647838d38ecc",
+    "parameters": null,
+    "calls": [
+      "input",
+      "frame.event",
+      "frame.state",
+      "logic.variable",
+      "bindings.unit",
+      "relation.join",
+      "logic.notEqual",
+      "effect.remove",
+      "value.identity"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "knowledge.transitions.model202.travel.r005",
+    "implementation": "sop",
+    "path": "commands/knowledge/transitions/model202/travel/r005.sop",
+    "hash": "f184e76b65fe4e3865a1a5f4b330c600cd62d4b812ea15189f7fdafa0e06c799",
+    "parameters": null,
+    "calls": [
+      "input",
+      "frame.event",
+      "frame.state",
+      "logic.variable",
+      "bindings.unit",
+      "relation.join",
+      "logic.notEqual",
+      "effect.remove",
+      "value.identity"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "knowledge.transitions.model202.travel.r006",
+    "implementation": "sop",
+    "path": "commands/knowledge/transitions/model202/travel/r006.sop",
+    "hash": "ac5f2469ecfed5d9e089e31fcbf4e693ddf6d6a7a369b91aa38c20d49dcb581f",
+    "parameters": null,
+    "calls": [
+      "input",
+      "frame.event",
+      "frame.state",
+      "logic.variable",
+      "bindings.unit",
+      "relation.join",
+      "logic.notEqual",
+      "effect.add",
+      "value.identity"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "knowledge.transitions.model202.travel.r007",
+    "implementation": "sop",
+    "path": "commands/knowledge/transitions/model202/travel/r007.sop",
+    "hash": "eb8b9f4db300df56351dd6c643c1a8a83ce4ffa11fc8ea758afe861fafdda8ef",
+    "parameters": null,
+    "calls": [
+      "input",
+      "frame.event",
+      "frame.state",
+      "logic.variable",
+      "bindings.unit",
+      "relation.join",
+      "effect.add",
+      "value.identity"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "knowledge.transitions.model303.drop.r000",
+    "implementation": "sop",
+    "path": "commands/knowledge/transitions/model303/drop/r000.sop",
+    "hash": "2f9505d76763f1fd1dfcdcbbe4e1adcb56b4c6252f8f240899c1d97edc70c487",
+    "parameters": null,
+    "calls": [
+      "input",
+      "frame.event",
+      "frame.state",
+      "logic.variable",
+      "bindings.unit",
+      "relation.join",
+      "effect.remove",
+      "value.identity"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "knowledge.transitions.model303.give.r001",
+    "implementation": "sop",
+    "path": "commands/knowledge/transitions/model303/give/r001.sop",
+    "hash": "fa520896fdbfeb7249effe1f76f31b881c15755e7d6c5f61c4d99fcfeb6b1947",
+    "parameters": null,
+    "calls": [
+      "input",
+      "frame.event",
+      "frame.state",
+      "logic.variable",
+      "bindings.unit",
+      "relation.join",
+      "relation.absent",
+      "effect.remove",
+      "value.identity"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "knowledge.transitions.model303.give.r002",
+    "implementation": "sop",
+    "path": "commands/knowledge/transitions/model303/give/r002.sop",
+    "hash": "ecab8120caa0d72acd63202d9e97155a6e49bba3b6d43d76f82523af17d2e6b5",
+    "parameters": null,
+    "calls": [
+      "input",
+      "frame.event",
+      "frame.state",
+      "logic.variable",
+      "bindings.unit",
+      "relation.join",
+      "effect.add",
+      "value.identity"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "knowledge.transitions.model303.take.r003",
+    "implementation": "sop",
+    "path": "commands/knowledge/transitions/model303/take/r003.sop",
+    "hash": "7abcda07c67914776aa48287fc2edfbca651c4e3446354747dcb97d998530b03",
+    "parameters": null,
+    "calls": [
+      "input",
+      "frame.event",
+      "frame.state",
+      "logic.variable",
+      "bindings.unit",
+      "relation.join",
+      "relation.absent",
+      "effect.add",
+      "value.identity"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "knowledge.transitions.model303.travel.r004",
+    "implementation": "sop",
+    "path": "commands/knowledge/transitions/model303/travel/r004.sop",
+    "hash": "dba31b6ae6619e823f653874c692d0439987aec3ab6266b826ea647838d38ecc",
+    "parameters": null,
+    "calls": [
+      "input",
+      "frame.event",
+      "frame.state",
+      "logic.variable",
+      "bindings.unit",
+      "relation.join",
+      "logic.notEqual",
+      "effect.remove",
+      "value.identity"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "knowledge.transitions.model303.travel.r005",
+    "implementation": "sop",
+    "path": "commands/knowledge/transitions/model303/travel/r005.sop",
+    "hash": "f184e76b65fe4e3865a1a5f4b330c600cd62d4b812ea15189f7fdafa0e06c799",
+    "parameters": null,
+    "calls": [
+      "input",
+      "frame.event",
+      "frame.state",
+      "logic.variable",
+      "bindings.unit",
+      "relation.join",
+      "logic.notEqual",
+      "effect.remove",
+      "value.identity"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "knowledge.transitions.model303.travel.r006",
+    "implementation": "sop",
+    "path": "commands/knowledge/transitions/model303/travel/r006.sop",
+    "hash": "ac5f2469ecfed5d9e089e31fcbf4e693ddf6d6a7a369b91aa38c20d49dcb581f",
+    "parameters": null,
+    "calls": [
+      "input",
+      "frame.event",
+      "frame.state",
+      "logic.variable",
+      "bindings.unit",
+      "relation.join",
+      "logic.notEqual",
+      "effect.add",
+      "value.identity"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "knowledge.transitions.model303.travel.r007",
+    "implementation": "sop",
+    "path": "commands/knowledge/transitions/model303/travel/r007.sop",
+    "hash": "eb8b9f4db300df56351dd6c643c1a8a83ce4ffa11fc8ea758afe861fafdda8ef",
+    "parameters": null,
+    "calls": [
+      "input",
+      "frame.event",
+      "frame.state",
+      "logic.variable",
+      "bindings.unit",
+      "relation.join",
+      "effect.add",
+      "value.identity"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "knowledge.transitions.model404.drop.r000",
+    "implementation": "sop",
+    "path": "commands/knowledge/transitions/model404/drop/r000.sop",
+    "hash": "2f9505d76763f1fd1dfcdcbbe4e1adcb56b4c6252f8f240899c1d97edc70c487",
+    "parameters": null,
+    "calls": [
+      "input",
+      "frame.event",
+      "frame.state",
+      "logic.variable",
+      "bindings.unit",
+      "relation.join",
+      "effect.remove",
+      "value.identity"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "knowledge.transitions.model404.give.r001",
+    "implementation": "sop",
+    "path": "commands/knowledge/transitions/model404/give/r001.sop",
+    "hash": "fa520896fdbfeb7249effe1f76f31b881c15755e7d6c5f61c4d99fcfeb6b1947",
+    "parameters": null,
+    "calls": [
+      "input",
+      "frame.event",
+      "frame.state",
+      "logic.variable",
+      "bindings.unit",
+      "relation.join",
+      "relation.absent",
+      "effect.remove",
+      "value.identity"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "knowledge.transitions.model404.give.r002",
+    "implementation": "sop",
+    "path": "commands/knowledge/transitions/model404/give/r002.sop",
+    "hash": "ecab8120caa0d72acd63202d9e97155a6e49bba3b6d43d76f82523af17d2e6b5",
+    "parameters": null,
+    "calls": [
+      "input",
+      "frame.event",
+      "frame.state",
+      "logic.variable",
+      "bindings.unit",
+      "relation.join",
+      "effect.add",
+      "value.identity"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "knowledge.transitions.model404.take.r003",
+    "implementation": "sop",
+    "path": "commands/knowledge/transitions/model404/take/r003.sop",
+    "hash": "7abcda07c67914776aa48287fc2edfbca651c4e3446354747dcb97d998530b03",
+    "parameters": null,
+    "calls": [
+      "input",
+      "frame.event",
+      "frame.state",
+      "logic.variable",
+      "bindings.unit",
+      "relation.join",
+      "relation.absent",
+      "effect.add",
+      "value.identity"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "knowledge.transitions.model404.travel.r004",
+    "implementation": "sop",
+    "path": "commands/knowledge/transitions/model404/travel/r004.sop",
+    "hash": "dba31b6ae6619e823f653874c692d0439987aec3ab6266b826ea647838d38ecc",
+    "parameters": null,
+    "calls": [
+      "input",
+      "frame.event",
+      "frame.state",
+      "logic.variable",
+      "bindings.unit",
+      "relation.join",
+      "logic.notEqual",
+      "effect.remove",
+      "value.identity"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "knowledge.transitions.model404.travel.r005",
+    "implementation": "sop",
+    "path": "commands/knowledge/transitions/model404/travel/r005.sop",
+    "hash": "f184e76b65fe4e3865a1a5f4b330c600cd62d4b812ea15189f7fdafa0e06c799",
+    "parameters": null,
+    "calls": [
+      "input",
+      "frame.event",
+      "frame.state",
+      "logic.variable",
+      "bindings.unit",
+      "relation.join",
+      "logic.notEqual",
+      "effect.remove",
+      "value.identity"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "knowledge.transitions.model404.travel.r006",
+    "implementation": "sop",
+    "path": "commands/knowledge/transitions/model404/travel/r006.sop",
+    "hash": "ac5f2469ecfed5d9e089e31fcbf4e693ddf6d6a7a369b91aa38c20d49dcb581f",
+    "parameters": null,
+    "calls": [
+      "input",
+      "frame.event",
+      "frame.state",
+      "logic.variable",
+      "bindings.unit",
+      "relation.join",
+      "logic.notEqual",
+      "effect.add",
+      "value.identity"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "knowledge.transitions.model404.travel.r007",
+    "implementation": "sop",
+    "path": "commands/knowledge/transitions/model404/travel/r007.sop",
+    "hash": "eb8b9f4db300df56351dd6c643c1a8a83ce4ffa11fc8ea758afe861fafdda8ef",
+    "parameters": null,
+    "calls": [
+      "input",
+      "frame.event",
+      "frame.state",
+      "logic.variable",
+      "bindings.unit",
+      "relation.join",
+      "effect.add",
+      "value.identity"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "knowledge.transitions.model505.drop.r000",
+    "implementation": "sop",
+    "path": "commands/knowledge/transitions/model505/drop/r000.sop",
+    "hash": "2f9505d76763f1fd1dfcdcbbe4e1adcb56b4c6252f8f240899c1d97edc70c487",
+    "parameters": null,
+    "calls": [
+      "input",
+      "frame.event",
+      "frame.state",
+      "logic.variable",
+      "bindings.unit",
+      "relation.join",
+      "effect.remove",
+      "value.identity"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "knowledge.transitions.model505.give.r001",
+    "implementation": "sop",
+    "path": "commands/knowledge/transitions/model505/give/r001.sop",
+    "hash": "9972e6ea88449822e90d85d3887924e45b6612c62012855c825b47c8d1d695a2",
+    "parameters": null,
+    "calls": [
+      "input",
+      "frame.event",
+      "frame.state",
+      "logic.variable",
+      "bindings.unit",
+      "relation.join",
+      "relation.absent",
+      "effect.remove",
+      "value.identity"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "knowledge.transitions.model505.give.r002",
+    "implementation": "sop",
+    "path": "commands/knowledge/transitions/model505/give/r002.sop",
+    "hash": "ecab8120caa0d72acd63202d9e97155a6e49bba3b6d43d76f82523af17d2e6b5",
+    "parameters": null,
+    "calls": [
+      "input",
+      "frame.event",
+      "frame.state",
+      "logic.variable",
+      "bindings.unit",
+      "relation.join",
+      "effect.add",
+      "value.identity"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "knowledge.transitions.model505.take.r003",
+    "implementation": "sop",
+    "path": "commands/knowledge/transitions/model505/take/r003.sop",
+    "hash": "7abcda07c67914776aa48287fc2edfbca651c4e3446354747dcb97d998530b03",
+    "parameters": null,
+    "calls": [
+      "input",
+      "frame.event",
+      "frame.state",
+      "logic.variable",
+      "bindings.unit",
+      "relation.join",
+      "relation.absent",
+      "effect.add",
+      "value.identity"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "knowledge.transitions.model505.travel.r004",
+    "implementation": "sop",
+    "path": "commands/knowledge/transitions/model505/travel/r004.sop",
+    "hash": "dba31b6ae6619e823f653874c692d0439987aec3ab6266b826ea647838d38ecc",
+    "parameters": null,
+    "calls": [
+      "input",
+      "frame.event",
+      "frame.state",
+      "logic.variable",
+      "bindings.unit",
+      "relation.join",
+      "logic.notEqual",
+      "effect.remove",
+      "value.identity"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "knowledge.transitions.model505.travel.r005",
+    "implementation": "sop",
+    "path": "commands/knowledge/transitions/model505/travel/r005.sop",
+    "hash": "f184e76b65fe4e3865a1a5f4b330c600cd62d4b812ea15189f7fdafa0e06c799",
+    "parameters": null,
+    "calls": [
+      "input",
+      "frame.event",
+      "frame.state",
+      "logic.variable",
+      "bindings.unit",
+      "relation.join",
+      "logic.notEqual",
+      "effect.remove",
+      "value.identity"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "knowledge.transitions.model505.travel.r006",
+    "implementation": "sop",
+    "path": "commands/knowledge/transitions/model505/travel/r006.sop",
+    "hash": "ac5f2469ecfed5d9e089e31fcbf4e693ddf6d6a7a369b91aa38c20d49dcb581f",
+    "parameters": null,
+    "calls": [
+      "input",
+      "frame.event",
+      "frame.state",
+      "logic.variable",
+      "bindings.unit",
+      "relation.join",
+      "logic.notEqual",
+      "effect.add",
+      "value.identity"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "knowledge.transitions.model505.travel.r007",
+    "implementation": "sop",
+    "path": "commands/knowledge/transitions/model505/travel/r007.sop",
+    "hash": "eb8b9f4db300df56351dd6c643c1a8a83ce4ffa11fc8ea758afe861fafdda8ef",
+    "parameters": null,
+    "calls": [
+      "input",
+      "frame.event",
+      "frame.state",
+      "logic.variable",
+      "bindings.unit",
+      "relation.join",
+      "effect.add",
+      "value.identity"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "language.ambiguity.instrument",
+    "implementation": "sop",
+    "path": "commands/language/ambiguity/instrument.sop",
+    "hash": "e36fdc3694d06f2c268c3ec5ce1bd589999d8d9170dac67092d6433be8192379",
+    "parameters": null,
+    "calls": [
+      "input",
+      "data.get",
+      "text.tokenize",
+      "data.prepend",
+      "data.sequence",
+      "logic.variable",
+      "bindings.unit",
+      "relation.join",
+      "rows.project"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "language.ambiguity.modifier",
+    "implementation": "sop",
+    "path": "commands/language/ambiguity/modifier.sop",
+    "hash": "774041e8a2f6449f15b0245ae1f1814d982fdd0e7f9910a0f2fd2dff4df8e1d0",
+    "parameters": null,
+    "calls": [
+      "input",
+      "data.get",
+      "text.tokenize",
+      "data.prepend",
+      "data.sequence",
+      "logic.variable",
+      "bindings.unit",
+      "relation.join",
+      "rows.project"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "language.apply",
+    "implementation": "sop",
+    "path": "commands/language/apply.sop",
+    "hash": "73e563e64b9576697e6fdf490aa27f9684e9dec2755c8cdcdd8d06f3fc29d864",
+    "parameters": null,
+    "calls": [
+      "input",
+      "data.get",
+      "data.record",
+      "program.call"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "language.grammar.drop1",
+    "implementation": "sop",
+    "path": "commands/language/grammar/drop1.sop",
+    "hash": "6a375d97bf1b0a973b1db2ce97c689ebae6e0933187e4080f10348d67522833b",
+    "parameters": null,
+    "calls": [
+      "input",
+      "data.get",
+      "text.tokenize",
+      "data.prepend",
+      "data.sequence",
+      "logic.variable",
+      "bindings.unit",
+      "relation.join",
+      "rows.project"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "language.grammar.drop2",
+    "implementation": "sop",
+    "path": "commands/language/grammar/drop2.sop",
+    "hash": "b2d51aecf5a7122c4a17640d0fcdecc7a1ff94b4d94f8747385d7ae986195c50",
+    "parameters": null,
+    "calls": [
+      "input",
+      "data.get",
+      "text.tokenize",
+      "data.prepend",
+      "data.sequence",
+      "logic.variable",
+      "bindings.unit",
+      "relation.join",
+      "rows.project"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "language.grammar.extension",
+    "implementation": "sop",
+    "path": "commands/language/grammar/extension.sop",
+    "hash": "f88a9b63017b4530af1bc85e658162505f9d8660be5a7897a6b7d3e496b7b4a6",
+    "parameters": null,
+    "calls": [
+      "input",
+      "data.get",
+      "text.tokenize",
+      "data.prepend",
+      "data.sequence",
+      "logic.variable",
+      "bindings.unit",
+      "relation.join",
+      "rows.project"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "language.grammar.give1",
+    "implementation": "sop",
+    "path": "commands/language/grammar/give1.sop",
+    "hash": "76d990ecfedcd7eb3f0a89e580b661cecee67b05aaafc7a686ca2ffe246fb5ac",
+    "parameters": null,
+    "calls": [
+      "input",
+      "data.get",
+      "text.tokenize",
+      "data.prepend",
+      "data.sequence",
+      "logic.variable",
+      "bindings.unit",
+      "relation.join",
+      "rows.project"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "language.grammar.give2",
+    "implementation": "sop",
+    "path": "commands/language/grammar/give2.sop",
+    "hash": "464da6afa2b7f2bad3917a1063be19d110883544637d2a71a850a3dea835dc66",
+    "parameters": null,
+    "calls": [
+      "input",
+      "data.get",
+      "text.tokenize",
+      "data.prepend",
+      "data.sequence",
+      "logic.variable",
+      "bindings.unit",
+      "relation.join",
+      "rows.project"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "language.grammar.inspect1",
+    "implementation": "sop",
+    "path": "commands/language/grammar/inspect1.sop",
+    "hash": "e1d36aaad5147a0ebed1ad6bc8190994e339814b3681181e2ba69e3654d82eb4",
+    "parameters": null,
+    "calls": [
+      "input",
+      "data.get",
+      "text.tokenize",
+      "data.prepend",
+      "data.sequence",
+      "logic.variable",
+      "bindings.unit",
+      "relation.join",
+      "rows.project"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "language.grammar.store1",
+    "implementation": "sop",
+    "path": "commands/language/grammar/store1.sop",
+    "hash": "df0b96c52cf768a42639d0baa0be2fb4ac4265cd241ad23421fdc0dd4c20947e",
+    "parameters": null,
+    "calls": [
+      "input",
+      "data.get",
+      "text.tokenize",
+      "data.prepend",
+      "data.sequence",
+      "logic.variable",
+      "bindings.unit",
+      "relation.join",
+      "rows.project"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "language.grammar.take1",
+    "implementation": "sop",
+    "path": "commands/language/grammar/take1.sop",
+    "hash": "9d3c6a69a6279fb2825e999b5efd7b14846e2da6ec3ce99edad595b2d15ef0d7",
+    "parameters": null,
+    "calls": [
+      "input",
+      "data.get",
+      "text.tokenize",
+      "data.prepend",
+      "data.sequence",
+      "logic.variable",
+      "bindings.unit",
+      "relation.join",
+      "rows.project"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "language.grammar.take2",
+    "implementation": "sop",
+    "path": "commands/language/grammar/take2.sop",
+    "hash": "c80238f4805f68c5df3e4ea0e8383747ce817476c30f6139cb70ae68e32c7a55",
+    "parameters": null,
+    "calls": [
+      "input",
+      "data.get",
+      "text.tokenize",
+      "data.prepend",
+      "data.sequence",
+      "logic.variable",
+      "bindings.unit",
+      "relation.join",
+      "rows.project"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "language.grammar.take3",
+    "implementation": "sop",
+    "path": "commands/language/grammar/take3.sop",
+    "hash": "278d40393d93835ae2c057f457147ab5a1952ffeaa957bda34643dc36f047a62",
+    "parameters": null,
+    "calls": [
+      "input",
+      "data.get",
+      "text.tokenize",
+      "data.prepend",
+      "data.sequence",
+      "logic.variable",
+      "bindings.unit",
+      "relation.join",
+      "rows.project"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "language.grammar.travel1",
+    "implementation": "sop",
+    "path": "commands/language/grammar/travel1.sop",
+    "hash": "fe3bb748e7d32c0eff4506e2b1674a031ea6f01d88f1086596ee976f410b6602",
+    "parameters": null,
+    "calls": [
+      "input",
+      "data.get",
+      "text.tokenize",
+      "data.prepend",
+      "data.sequence",
+      "logic.variable",
+      "bindings.unit",
+      "relation.join",
+      "rows.project"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "language.grammar.travel2",
+    "implementation": "sop",
+    "path": "commands/language/grammar/travel2.sop",
+    "hash": "3af0a5987bef97de9ca7621b0abbde262aa980d2ac5b2671c958d86c3639cbd8",
+    "parameters": null,
+    "calls": [
+      "input",
+      "data.get",
+      "text.tokenize",
+      "data.prepend",
+      "data.sequence",
+      "logic.variable",
+      "bindings.unit",
+      "relation.join",
+      "rows.project"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "language.grammar.travel3",
+    "implementation": "sop",
+    "path": "commands/language/grammar/travel3.sop",
+    "hash": "56cfcf598970b3c1d79835670004a39a76cf534e8fa08c5e267237f0ea9da6a3",
+    "parameters": null,
+    "calls": [
+      "input",
+      "data.get",
+      "text.tokenize",
+      "data.prepend",
+      "data.sequence",
+      "logic.variable",
+      "bindings.unit",
+      "relation.join",
+      "rows.project"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "language.parse",
+    "implementation": "sop",
+    "path": "commands/language/parse.sop",
+    "hash": "f0aa536286f4177fa70d9e7664304062e49730cd99e8bd84c1722c19512ee00f",
+    "parameters": null,
+    "calls": [
+      "input",
+      "data.get",
+      "data.sequence",
+      "collection.map",
+      "data.flatten",
+      "data.unique"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "language.render.atAdded",
+    "implementation": "sop",
+    "path": "commands/language/render/atAdded.sop",
+    "hash": "7e0c46210322e53a5af3add0286d956c876c1a44efb61e0445e5df3a85893c1d",
+    "parameters": null,
+    "calls": [
+      "input",
+      "data.get",
+      "logic.variable",
+      "bindings.unit",
+      "relation.join",
+      "rows.map"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "language.render.atRemoved",
+    "implementation": "sop",
+    "path": "commands/language/render/atRemoved.sop",
+    "hash": "b6ccf3e41265dfc692e62ce15536ee4a9e33a34c9c084449b22d4addefedbad3",
+    "parameters": null,
+    "calls": [
+      "input",
+      "data.get",
+      "logic.variable",
+      "bindings.unit",
+      "relation.join",
+      "rows.map"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "language.render.holdsAdded",
+    "implementation": "sop",
+    "path": "commands/language/render/holdsAdded.sop",
+    "hash": "bf2db98a69a303d7c238e3fb726294f4c88df4dc188b40254b338f7fa3c777f6",
+    "parameters": null,
+    "calls": [
+      "input",
+      "data.get",
+      "logic.variable",
+      "bindings.unit",
+      "relation.join",
+      "rows.map"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "language.render.holdsRemoved",
+    "implementation": "sop",
+    "path": "commands/language/render/holdsRemoved.sop",
+    "hash": "e93c7d5b3e6c0df81c0819454510b45b172c9790b1297ddfdf9dc7e9d2e51823",
+    "parameters": null,
+    "calls": [
+      "input",
+      "data.get",
+      "logic.variable",
+      "bindings.unit",
+      "relation.join",
+      "rows.map"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "language.say.atAdded",
+    "implementation": "sop",
+    "path": "commands/language/say/atAdded.sop",
+    "hash": "752b2fc52ea558a8623dc818daf807f047cb2ef5d470b670420cda3a1bffbf55",
+    "parameters": null,
+    "calls": [
+      "input",
+      "data.get",
+      "text"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "language.say.atRemoved",
+    "implementation": "sop",
+    "path": "commands/language/say/atRemoved.sop",
+    "hash": "6d2923b26523d8f7fe12cb688873cb84d4a9413aba3d753b4b4be3a152ec9ca7",
+    "parameters": null,
+    "calls": [
+      "input",
+      "data.get",
+      "text"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "language.say.holdsAdded",
+    "implementation": "sop",
+    "path": "commands/language/say/holdsAdded.sop",
+    "hash": "c5db87b41facebdeae3e04e777a9932594cc490654558d27bb0f20f51cd36b36",
+    "parameters": null,
+    "calls": [
+      "input",
+      "data.get",
+      "text"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "language.say.holdsRemoved",
+    "implementation": "sop",
+    "path": "commands/language/say/holdsRemoved.sop",
+    "hash": "b6f075e385b4416a5010e1dbe02999e67ba14cf7b1314c9a555fb184f03243d5",
+    "parameters": null,
+    "calls": [
+      "input",
+      "data.get",
+      "text"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "language.support.instrument",
+    "implementation": "sop",
+    "path": "commands/language/support/instrument.sop",
+    "hash": "542689559536a59d85ff42f5b7b330c8e4e319212a3fbd51f157bb58eda20840",
+    "parameters": null,
+    "calls": [
+      "input",
+      "data.get",
+      "logic.variable",
+      "bindings.unit",
+      "relation.join",
+      "rows.project"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "language.support.modifier",
+    "implementation": "sop",
+    "path": "commands/language/support/modifier.sop",
+    "hash": "a3e39125242fc5870099254cdddfc859f59fe5d55185f951f36c5dfe8adba33c",
+    "parameters": null,
+    "calls": [
+      "input",
+      "data.get",
+      "logic.variable",
+      "bindings.unit",
+      "relation.join",
+      "rows.project"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "learning.numeric",
+    "implementation": "sop",
+    "path": "commands/learning/numeric.sop",
+    "hash": "e91f1e303871e1a978c97ff49aaf9ce9a76889e622f9a12f5a5b6d12682c9730",
+    "parameters": null,
+    "calls": [
+      "input",
+      "data.get",
+      "data.sequence",
+      "program.synthesize"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "logic.equal",
+    "implementation": "mjs",
+    "path": "commands/logic/equal.mjs",
+    "hash": "0693749a736e223879f34e87e332529321bb8d4e8d7db0c835f461e3c1b64051",
+    "parameters": "rows left right",
+    "calls": []
+  },
+  {
+    "name": "logic.notEqual",
+    "implementation": "mjs",
+    "path": "commands/logic/notEqual.mjs",
+    "hash": "99ca3d6f4520e257b9e1aa219bf1db6f0f687686d4add85c46ccb3d02c16cd34",
+    "parameters": "rows left right",
+    "calls": []
+  },
+  {
+    "name": "logic.variable",
+    "implementation": "mjs",
+    "path": "commands/logic/variable.mjs",
+    "hash": "4bf77d8d182cbf432a429a1ea8235d6895a7094a11f39b5b81e522b452c7e164",
+    "parameters": "",
+    "calls": []
+  },
+  {
+    "name": "number.add",
+    "implementation": "mjs",
+    "path": "commands/number/add.mjs",
+    "hash": "20d7c240d3aa928a2af98c880a759167f56e8ec20a9b868b2286e802b6c7036c",
+    "parameters": "left right",
+    "calls": []
+  },
+  {
+    "name": "number.multiply",
+    "implementation": "mjs",
+    "path": "commands/number/multiply.mjs",
+    "hash": "b747d1cd381f57b80d60a0695b71a8814fc9167863eee3daf20bacf106893ad5",
+    "parameters": "left right",
+    "calls": []
+  },
+  {
+    "name": "number.subtract",
+    "implementation": "mjs",
+    "path": "commands/number/subtract.mjs",
+    "hash": "eea9b1b0dcbeb0c141e7ff71b95e431e666052fa250dde3f9122e1bf86fb4577",
+    "parameters": "left right",
+    "calls": []
+  },
+  {
+    "name": "program.abstract",
+    "implementation": "mjs",
+    "path": "commands/program/abstract.mjs",
+    "hash": "39bd3f37191002b43166cedd600d41a94c3919ef026026952f666edc4e801007",
+    "parameters": "sources",
+    "calls": []
+  },
+  {
+    "name": "program.apply",
+    "implementation": "sop",
+    "path": "commands/program/apply.sop",
+    "hash": "321c611b578abcf9440c83caa1ae6bf87d53cfe2fb70849e6b07ba4e9a2fae59",
+    "parameters": null,
+    "calls": [
+      "input",
+      "data.get",
+      "program.call"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "program.call",
+    "implementation": "mjs",
+    "path": "commands/program/call.mjs",
+    "hash": "0a7980facd67eca092fa1f1ffe75e684d70c5c65a53baef04384e461a40536ec",
+    "parameters": "command arguments",
+    "calls": []
+  },
+  {
+    "name": "program.inspect",
+    "implementation": "mjs",
+    "path": "commands/program/inspect.mjs",
+    "hash": "6d679560afb26f3c043a6c7fcb51b224073f6cf89d7acda4c7ec78f00b874f41",
+    "parameters": "reference",
+    "calls": []
+  },
+  {
+    "name": "program.retrieve",
+    "implementation": "mjs",
+    "path": "commands/program/retrieve.mjs",
+    "hash": "6d91b2ca60cbe240f0e5b9ee397126d8b96cf187fbc3d531619270fca8d6972c",
+    "parameters": "names terms",
+    "calls": []
+  },
+  {
+    "name": "program.synthesize",
+    "implementation": "mjs",
+    "path": "commands/program/synthesize.mjs",
+    "hash": "66385f0e38cb4d30ad682a25049817cdbdb7222bedd627b8e52a4f475cef85d3",
+    "parameters": "training validation operations maxNodes maxCandidates",
+    "calls": []
+  },
+  {
+    "name": "relation.absent",
+    "implementation": "mjs",
+    "path": "commands/relation/absent.mjs",
+    "hash": "d6778c7786dd336cb0b70e4184021799a9188d876ad927ea8a3a5a42faecd2c0",
+    "parameters": "rows facts name coverage? arg*",
+    "calls": []
+  },
+  {
+    "name": "relation.join",
+    "implementation": "mjs",
+    "path": "commands/relation/join.mjs",
+    "hash": "8dac728f364f88c249f4e996cece45b922be48299ac8dfa22d6d8d7378bc7ac6",
+    "parameters": "rows facts name arg*",
+    "calls": []
+  },
+  {
+    "name": "rows.map",
+    "implementation": "mjs",
+    "path": "commands/rows/map.mjs",
+    "hash": "1561a9c3263b80e76e847f3ab1b7817ed9b88b3fea0cbf42144668690a01e3e9",
+    "parameters": "rows command *",
+    "calls": []
+  },
+  {
+    "name": "rows.project",
+    "implementation": "mjs",
+    "path": "commands/rows/project.mjs",
+    "hash": "1417a38c962023d091e0e6f06ee67e78c16a98ee8edb8debfb5d0858da8e81e9",
+    "parameters": "rows name arg*",
+    "calls": []
+  },
+  {
+    "name": "state.apply",
+    "implementation": "mjs",
+    "path": "commands/state/apply.mjs",
+    "hash": "3086148b2762e6f524a3d4c00cda9dc5ebbf9fab03bb4a4e11e7ed11c200b5a7",
+    "parameters": "before effects",
+    "calls": []
+  },
+  {
+    "name": "state.close",
+    "implementation": "mjs",
+    "path": "commands/state/close.mjs",
+    "hash": "005888c9b1d9797d6226feaff487994066ce2260cd47f068ab598a433e6f9b14",
+    "parameters": "facts commands maxRounds?",
+    "calls": []
+  },
+  {
+    "name": "state.difference",
+    "implementation": "mjs",
+    "path": "commands/state/difference.mjs",
+    "hash": "dfac3791d41d84579779cff2d3f56e870e81373840ca00d231307ccae00d35e5",
+    "parameters": "before after",
+    "calls": []
+  },
+  {
+    "name": "tasks.advance",
+    "implementation": "sop",
+    "path": "commands/tasks/advance.sop",
+    "hash": "b3bd4d648299c14f3828d32c199acd1d2e4237fa4bf8e09b2f6866fddf1478a4",
+    "parameters": null,
+    "calls": [
+      "input",
+      "data.get",
+      "data.sequence",
+      "knowledge.transitions",
+      "program.retrieve",
+      "collection.requireNonEmpty",
+      "collection.map",
+      "data.flatten",
+      "state.apply",
+      "data.record"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "tasks.ambiguity",
+    "implementation": "sop",
+    "path": "commands/tasks/ambiguity.sop",
+    "hash": "8ceeadef920095390092ac22cdfaa7405c95835e1a65e6464ad695d222827056",
+    "parameters": null,
+    "calls": [
+      "input",
+      "data.get",
+      "language.ambiguity.instrument",
+      "language.ambiguity.modifier",
+      "data.sequence",
+      "data.flatten",
+      "language.support.instrument",
+      "language.support.modifier",
+      "data.resolve"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "tasks.ancestors",
+    "implementation": "sop",
+    "path": "commands/tasks/ancestors.sop",
+    "hash": "afa784f5599b735263937fe6398aaff169f9bb553c0bd09b051a4e06624ff45f",
+    "parameters": null,
+    "calls": [
+      "input",
+      "data.get",
+      "data.sequence",
+      "state.close"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "tasks.respond",
+    "implementation": "sop",
+    "path": "commands/tasks/respond.sop",
+    "hash": "d24933bcb846eda5f76eb21dc2cb7af78729126d75471bd619c31a9bceda99b4",
+    "parameters": null,
+    "calls": [
+      "input",
+      "data.get",
+      "language.parse",
+      "data.one",
+      "tasks.advance",
+      "tasks.summarize",
+      "data.record"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "tasks.summarize",
+    "implementation": "sop",
+    "path": "commands/tasks/summarize.sop",
+    "hash": "2935403c7f57c1a5300a9bb65def3fc0895acc18ca1e85efe8ba8a5e2b245ea8",
+    "parameters": null,
+    "calls": [
+      "input",
+      "data.get",
+      "state.difference",
+      "language.render.atAdded",
+      "language.render.atRemoved",
+      "language.render.holdsAdded",
+      "language.render.holdsRemoved",
+      "data.sequence",
+      "data.flatten",
+      "collection.requireSameSize",
+      "text.join"
+    ],
+    "input": "named arguments exposed as $input"
+  },
+  {
+    "name": "text",
+    "implementation": "mjs",
+    "path": "commands/text.mjs",
+    "hash": "6b272b39b116d3919e3cb7a3be9d54d0281912badfedcaf9f25ab16bb7b446b8",
+    "parameters": "raw multiline text with $ interpolation",
+    "calls": []
+  },
+  {
+    "name": "text.join",
+    "implementation": "mjs",
+    "path": "commands/text/join.mjs",
+    "hash": "e9b685d4f58fd5110279d2fd88888e8b1a42099bcac898c4d5b87a214cf6c9bb",
+    "parameters": "items separator?",
+    "calls": []
+  },
+  {
+    "name": "text.tokenize",
+    "implementation": "mjs",
+    "path": "commands/text/tokenize.mjs",
+    "hash": "c664a08368896011f53479a7c36d31aec0a8261b85053620c1ce634483f97587",
+    "parameters": "text",
+    "calls": []
+  },
+  {
+    "name": "value.identity",
+    "implementation": "sop",
+    "path": "commands/value/identity.sop",
+    "hash": "d5b53410499e5663405b50e74ba3f7d26e487859fbf2bf4a569bb3f4cd8e97f8",
+    "parameters": null,
+    "calls": [
+      "input",
+      "data.get"
+    ],
+    "input": "named arguments exposed as $input"
+  }
+]
